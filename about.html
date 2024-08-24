@@ -3,40 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Your Name</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>About | My Portfolio</title>
+    <link href="css/styles.css" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="bg-gray-900 text-white font-sans">
+    <!-- Include Header -->
+    <?php include 'header.php'; ?>
 
-    <section id="about">
-        <h1>About Me</h1>
-        <p>I am a passionate web developer with experience in creating dynamic and responsive websites. My skills include HTML, CSS, JavaScript, and various frameworks.</p>
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML & CSS</li>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>Node.js</li>
-        </ul>
-        <h2>Experience</h2>
-        <p>Details about your work experience, internships, and projects.</p>
-    </section>
+    <main class="min-h-screen p-8">
+        <h1 class="text-3xl font-bold mb-4">About Me</h1>
+        <p class="text-gray-300 leading-relaxed">
+            I'm [Your Name], a [Your Profession] with a passion for [Your Passion]. 
+            I specialize in [Your Specialization] and have worked on [Your Experience].
+        </p>
+    </main>
 
-    <footer>
-        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
-    </footer>
-
-    <script src="js/scripts.js"></script>
+    <!-- Include Footer -->
+    <?php include 'footer.php'; ?>
 </body>
 </html>
