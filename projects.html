@@ -5,22 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | My Portfolio</title>
     <link href="css/styles.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="bg-gray-900 text-white font-sans">
-    <!-- Include Header -->
-    <header class="bg-gray-800 text-gray-100 p-4">
-        <nav class="flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold">My Portfolio</a>
-            <ul class="flex space-x-4">
-                <li><a href="index.html" class="hover:text-gray-300">Home</a></li>
+    <!-- New Header -->
+    <header class="bg-black text-white p-4 flex justify-between items-center">
+        <nav>
+            <ul class="flex space-x-6">
                 <li><a href="about.html" class="hover:text-gray-300">About</a></li>
+                <li><a href="publications.html" class="hover:text-gray-300">Publications</a></li>
+                <li><a href="experiences.html" class="hover:text-gray-300">Experiences</a></li>
                 <li><a href="projects.html" class="hover:text-gray-300">Projects</a></li>
-                <li><a href="blog.html" class="hover:text-gray-300">Blog</a></li>
-                <li><a href="contact.html" class="hover:text-gray-300">Contact</a></li>
             </ul>
         </nav>
+        <button class="p-2 rounded-full bg-gray-800 hover:bg-gray-700">
+            <i data-lucide="sun" class="w-5 h-5"></i>
+        </button>
     </header>
-
     <main class="min-h-screen p-8">
         <h1 class="text-3xl font-bold mb-4">My Projects</h1>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -32,11 +34,12 @@
             <!-- Repeat ends -->
         </div>
     </main>
-
     <!-- Include Footer -->
     <footer class="bg-gray-800 text-gray-100 p-4 text-center">
         <p>&copy; 2024 My Portfolio. All rights reserved.</p>
     </footer>
-
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
