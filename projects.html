@@ -3,41 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Your Name</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Projects | My Portfolio</title>
+    <link href="css/styles.css" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="bg-gray-900 text-white font-sans">
+    <!-- Include Header -->
+    <?php include 'header.php'; ?>
 
-    <section id="projects">
-        <h1>My Projects</h1>
-        <div class="project">
-            <h2>Project 1</h2>
-            <p>Description of your project. Include technologies used and the problem it solves.</p>
-            <a href="#">View Project</a>
+    <main class="min-h-screen p-8">
+        <h1 class="text-3xl font-bold mb-4">My Projects</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <!-- Repeat this block for each project -->
+            <div class="bg-gray-800 p-4 rounded">
+                <h2 class="text-xl font-bold mb-2">Project Title</h2>
+                <p class="text-gray-300">Brief description of the project.</p>
+            </div>
+            <!-- Repeat ends -->
         </div>
-        <div class="project">
-            <h2>Project 2</h2>
-            <p>Description of your project. Include technologies used and the problem it solves.</p>
-            <a href="#">View Project</a>
-        </div>
-        <!-- Add more projects as needed -->
-    </section>
+    </main>
 
-    <footer>
-        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
-    </footer>
-
-    <script src="js/scripts.js"></script>
+    <!-- Include Footer -->
+    <?php include 'footer.php'; ?>
 </body>
 </html>
