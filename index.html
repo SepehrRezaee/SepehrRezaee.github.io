@@ -3,32 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Your Name</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Home | My Portfolio</title>
+    <link href="css/styles.css" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="bg-gray-900 text-white font-sans">
+    <!-- Include Header -->
+    <?php include 'header.php'; ?>
 
-    <section id="home">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Your Name - Web Developer, Designer, and Programmer</p>
-        <a href="about.html" class="btn">Learn More About Me</a>
-    </section>
+    <main class="min-h-screen flex items-center justify-center">
+        <div class="text-center max-w-lg p-8">
+            <h1 class="text-4xl font-bold mb-4">Welcome to My Portfolio</h1>
+            <p class="text-lg text-gray-300 mb-6">
+                I'm [Your Name], a [Your Profession]. Check out my work and get in touch!
+            </p>
+            <a href="projects.html" class="text-lg text-gray-100 border border-gray-100 px-4 py-2 rounded hover:bg-gray-100 hover:text-gray-900 transition">View Projects</a>
+        </div>
+    </main>
 
-    <footer>
-        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
-    </footer>
-
-    <script src="js/scripts.js"></script>
+    <!-- Include Footer -->
+    <?php include 'footer.php'; ?>
 </body>
 </html>
