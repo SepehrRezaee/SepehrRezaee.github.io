@@ -3,37 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | My Portfolio</title>
-    <link href="css/styles.css" rel="stylesheet">
+    <title>Sepehr Rezaee - Personal Webpage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body.dark-mode {
+            background-color: #1a202c;
+            color: white;
+        }
+        .dark-mode .card {
+            background-color: #2d3748;
+            color: white;
+        }
+    </style>
 </head>
-<body class="bg-gray-900 text-white font-sans">
-    <!-- Include Header -->
-    <header class="bg-gray-800 text-gray-100 p-4">
-        <nav class="flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold">My Portfolio</a>
-            <ul class="flex space-x-4">
-                <li><a href="index.html" class="hover:text-gray-300">Home</a></li>
-                <li><a href="about.html" class="hover:text-gray-300">About</a></li>
-                <li><a href="projects.html" class="hover:text-gray-300">Projects</a></li>
-                <li><a href="blog.html" class="hover:text-gray-300">Blog</a></li>
-                <li><a href="contact.html" class="hover:text-gray-300">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main class="min-h-screen flex items-center justify-center">
-        <div class="text-center max-w-lg p-8">
-            <h1 class="text-4xl font-bold mb-4">Welcome to My Portfolio</h1>
-            <p class="text-lg text-gray-300 mb-6">
-                I'm [Your Name], a [Your Profession]. Check out my work and get in touch!
-            </p>
-            <a href="projects.html" class="text-lg text-gray-100 border border-gray-100 px-4 py-2 rounded hover:bg-gray-100 hover:text-gray-900 transition">View Projects</a>
+<body class="bg-white text-black">
+    <div class="container my-5">
+        <div class="d-flex justify-content-between align-items-center">
+            <h1 class="text-3xl font-bold">Sepehr Rezaee</h1>
+            <button id="theme-toggle" class="btn btn-primary">Toggle Theme</button>
         </div>
-    </main>
+        <div class="mt-5">
+            <h2 class="text-2xl font-semibold">Contact Information</h2>
+            <p>Email: <a href="mailto:sepehrrezaee2002@gmail.com" class="text-blue-500">sepehrrezaee2002@gmail.com</a></p>
+            <p>Github: <a href="https://github.com/SepehrRezaee" target="_blank" class="text-blue-500">SepehrRezaee</a></p>
+            <p>Google Scholar: <a href="https://scholar.google.com/citations?user=kYl9IWkAAAAJ&hl=en" target="_blank" class="text-blue-500">Sepehr Rezaee</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/sepehr-rezaee/" target="_blank" class="text-blue-500">sepehr-rezaee</a></p>
+        </div>
+        <div class="mt-5">
+            <h2 class="text-2xl font-semibold">Education</h2>
+            <p>Bachelor of Science in Computer Science, The National University of Iran, Tehran (2021-2025)</p>
+            <p>Focus: Deep Learning, Machine Learning, and AI Safety</p>
+        </div>
+        <div class="mt-5">
+            <h2 class="text-2xl font-semibold">Publications</h2>
+            <ul class="list-disc pl-5">
+                <li>Backdooring Out-of-Distribution Detection Methods: A Novel Attack Approach. Submitted to NeurIPS 2024.</li>
+                <li>Scanning Trojaned Models Using Out-of-Distribution Samples. Submitted to NeurIPS 2024.</li>
+                <li>Toward Robust Novelty Detection Under Style Shifts. Submitted to NeurIPS 2024.</li>
+                <li>Comparison of Pre-training and Classification Models for Early Detection of Alzheimer’s Disease Using MRI. Presented at the 8th International Conference on Combinatorics, Cryptography, Computer Science, and Computation, Iran, 2023.</li>
+                <li>Unsupervised Algorithms: Clustering (with Implementation). Chapter in the book Hierarchical Clustering Methods, Aarvan Publications, 2022.</li>
+            </ul>
+        </div>
+        <div class="mt-5">
+            <h2 class="text-2xl font-semibold">Professional Experience</h2>
+            <ul class="list-disc pl-5">
+                <li>Research Assistant, Robust and Interpretable Machine Learning Lab, Sharif University of Technology, Tehran (2024–Present)</li>
+                <li>Research Assistant, Artificial Intelligence and Scientific Computing Lab, Tehran (2021–Present)</li>
+                <li>Deep Learning and Neuroscience Intern Researcher, Institute for Research in Fundamental Sciences (IPM), Tehran (2023–2024)</li>
+                <li>Project Manager, NovaVira, Tehran (2023–2024)</li>
+                <li>System Engineer, Mohaymen ICT Company, Tehran (2022)</li>
+                <li>Process Developer, Mohaymen ICT Company, Tehran (2022)</li>
+                <li>Software Quality Assurance Tester, VALMART (Online Exchange), Tehran (2021)</li>
+            </ul>
+        </div>
+        <div class="mt-5">
+            <h2 class="text-2xl font-semibold">Skills & Proficiencies</h2>
+            <p>Deep Learning, Machine Learning, Image Processing, Data Science, LLM, Computational Neuroscience, Software Engineering, Project Management, Teaching, System Engineering, Version Control</p>
+        </div>
+    </div>
 
-    <!-- Include Footer -->
-    <footer class="bg-gray-800 text-gray-100 p-4 text-center">
-        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
-    </footer>
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
 </body>
 </html>
