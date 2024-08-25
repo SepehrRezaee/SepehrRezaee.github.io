@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sepehr Rezaee - CV</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="icon" href="./SR.svg" type="image/svg+xml">
     <style>
         @keyframes rainbow {
             0% {
@@ -35,24 +34,70 @@
         .rainbow-text {
             animation: rainbow 5s linear infinite;
         }
+
+        .grayscale-img {
+            filter: grayscale(100%);
+            border-radius: 50%;
+            max-width: 150px;
+            margin: 0 auto;
+        }
     </style>
     <script>
         function toggleTheme() {
             const htmlElement = document.documentElement;
             const isDarkMode = htmlElement.classList.contains('dark');
+            const themeButton = document.getElementById('theme-button');
+            const themeIcon = document.getElementById('theme-icon');
+
             if (isDarkMode) {
                 htmlElement.classList.remove('dark');
                 localStorage.setItem('theme', 'light');
+                themeButton.setAttribute('aria-label', 'Switch to dark mode');
+                themeIcon.innerHTML = `
+                    <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <path d="M12 1v2"></path>
+                        <path d="M12 21v2"></path>
+                        <path d="M4.22 4.22l1.42 1.42"></path>
+                        <path d="M18.36 18.36l1.42 1.42"></path>
+                        <path d="M1 12h2"></path>
+                        <path d="M21 12h2"></path>
+                        <path d="M4.22 19.78l1.42-1.42"></path>
+                        <path d="M18.36 5.64l1.42-1.42"></path>
+                    </g>`;
             } else {
                 htmlElement.classList.add('dark');
                 localStorage.setItem('theme', 'dark');
+                themeButton.setAttribute('aria-label', 'Switch to light mode');
+                themeIcon.innerHTML = `
+                    <path fill="currentColor" d="M21,4.13,17.2,6.13,13.7,7.4c-1.1,0.5-2.3,0.4-3.3,0.1-1.6-0.4-2.4-2-2-3.5,0.1-0.6,0.4-1.1,1.1-1.6C11.2,1.8,13,0.4,14.7,1.1c1.6,0.7,2.6,2.5,2.9,4.3,0.2,1.1,0.1,2.4-0.3,3.4L13.8,10.6l-4.2,1.6C7.4,12.5,6.3,13,5.3,14,2.3,17,0,22.7,0,23.8c0,0.3,0,0.5,0.3,0.7,0.3,0.2,0.5,0.2,0.7,0.3l7.3,1.5c1.3,0.3,3-0.7,4-2.2,1.1-1.6,2.8-4.4,3.7-6.1c0.3-0.6,0.7-1,1.2-1.3c0.6-0.3,1.1-0.4,1.7-0.3c1.4,0.3,2.8,1.2,3.7,2.3C21.4,18.4,21.6,18.8,21.9,19.4c0.1,0.2,0.3,0.5,0.6,0.6c0.3,0.1,0.7,0,0.9-0.2l2.3-1.4C23.6,17,22.4,14.5,21,11C20.7,10.2,20.5,9.4,20.2,8.7C19.4,7.1,20.5,5.3,21,4.13z"></path>`;
             }
         }
 
         document.addEventListener('DOMContentLoaded', () => {
             const savedTheme = localStorage.getItem('theme') || 'light';
+            const themeButton = document.getElementById('theme-button');
+            const themeIcon = document.getElementById('theme-icon');
+
             if (savedTheme === 'dark') {
                 document.documentElement.classList.add('dark');
+                themeButton.setAttribute('aria-label', 'Switch to light mode');
+                themeIcon.innerHTML = `
+                    <path fill="currentColor" d="M21,4.13,17.2,6.13,13.7,7.4c-1.1,0.5-2.3,0.4-3.3,0.1-1.6-0.4-2.4-2-2-3.5,0.1-0.6,0.4-1.1,1.1-1.6C11.2,1.8,13,0.4,14.7,1.1c1.6,0.7,2.6,2.5,2.9,4.3,0.2,1.1,0.1,2.4-0.3,3.4L13.8,10.6l-4.2,1.6C7.4,12.5,6.3,13,5.3,14,2.3,17,0,22.7,0,23.8c0,0.3,0,0.5,0.3,0.7,0.3,0.2,0.5,0.2,0.7,0.3l7.3,1.5c1.3,0.3,3-0.7,4-2.2,1.1-1.6,2.8-4.4,3.7-6.1c0.3-0.6,0.7-1,1.2-1.3c0.6-0.3,1.1-0.4,1.7-0.3c1.4,0.3,2.8,1.2,3.7,2.3C21.4,18.4,21.6,18.8,21.9,19.4c0.1,0.2,0.3,0.5,0.6,0.6c0.3,0.1,0.7,0,0.9-0.2l2.3-1.4C23.6,17,22.4,14.5,21,11C20.7,10.2,20.5,9.4,20.2,8.7C19.4,7.1,20.5,5.3,21,4.13z"></path>`;
+            } else {
+                themeButton.setAttribute('aria-label', 'Switch to dark mode');
+                themeIcon.innerHTML = `
+                    <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <path d="M12 1v2"></path>
+                        <path d="M12 21v2"></path>
+                        <path d="M4.22 4.22l1.42 1.42"></path>
+                        <path d="M18.36 18.36l1.42 1.42"></path>
+                        <path d="M1 12h2"></path>
+                        <path d="M21 12h2"></path>
+                        <path d="M4.22 19.78l1.42-1.42"></path>
+                        <path d="M18.36 5.64l1.42-1.42"></path>
+                    </g>`;
             }
         });
     </script>
@@ -62,14 +107,14 @@
     <div class="max-w-4xl mx-auto p-6">
         <!-- Theme Toggle Button -->
         <div class="flex justify-end mb-4">
-            <button onclick="toggleTheme()" class="p-2 bg-gray-200 dark:bg-gray-800 rounded-md">
-                <svg id="theme-icon" class="w-6 h-6 text-black dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M12 2.5V4.5m0 15v2a9 9 0 110-18v2m0 12.5l-3-3m6 3l-3-3m6-3l-3 3m-6-3l-3 3m6-6l-3 3m6-3l-3 3">
-                    </path>
-                </svg>
+            <button id="theme-button" onclick="toggleTheme()" class="p-2 bg-gray-200 dark:bg-gray-800 rounded-md" aria-label="Switch to dark mode">
+                <svg id="theme-icon" class="w-6 h-6" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>
             </button>
+        </div>
+
+        <!-- Grayscale Image -->
+        <div class="flex justify-center mb-4">
+            <img src="/mnt/data/sepehrrezaee.png" alt="Sepehr Rezaee" class="grayscale-img">
         </div>
 
         <header class="text-center mb-12">
@@ -133,7 +178,7 @@
             </ul>
         </section>
 
-        <footer class="bg-gray-800 text-gray-100 p-4 text-center">
+        <footer class="text-center mt-12">
             <p>© 2024 Sepehr Rezaee. All rights reserved.</p>
         </footer>
     </div>
