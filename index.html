@@ -4,106 +4,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sepehr Rezaee - Personal Website</title>
-    <!-- Tailwind CSS CDN -->
+    <title>Sepehr Rezaee - CV</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!-- Bootstrap 5 CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        .dark-mode {
-            background-color: #121212;
-            color: white;
+        @keyframes rainbow {
+            0% {
+                color: red;
+            }
+            16% {
+                color: orange;
+            }
+            32% {
+                color: yellow;
+            }
+            48% {
+                color: green;
+            }
+            64% {
+                color: blue;
+            }
+            80% {
+                color: indigo;
+            }
+            100% {
+                color: violet;
+            }
         }
 
-        .light-mode {
-            background-color: white;
-            color: black;
+        .rainbow-text {
+            animation: rainbow 5s linear infinite;
         }
     </style>
-</head>
-
-<body class="light-mode">
-    <div class="container mx-auto p-4">
-        <!-- Header Section -->
-        <div class="text-center">
-            <h1 class="text-4xl font-bold">Sepehr Rezaee</h1>
-            <p class="text-lg mt-2">Data Scientist & AI Enthusiast</p>
-            <button id="theme-toggle" class="mt-4 btn btn-outline-primary">Toggle Theme</button>
-        </div>
-
-        <!-- About Me Section -->
-        <div class="mt-8">
-            <h2 class="text-2xl font-semibold">About Me</h2>
-            <p class="mt-2">I am a data scientist with a focus on machine learning, deep learning, and data analysis. I have a passion for turning data into actionable insights and building scalable AI systems. My experience includes working with various datasets, implementing algorithms, and optimizing model performance.</p>
-        </div>
-
-        <!-- Contact Information -->
-        <div class="mt-8">
-            <h2 class="text-2xl font-semibold">Contact Information</h2>
-            <p>Email: <a href="mailto:sepehrrezaee2002@gmail.com" class="text-blue-600">sepehrrezaee2002@gmail.com</a></p>
-            <p>Github: <a href="https://github.com/SepehrRezaee" target="_blank" class="text-blue-600">SepehrRezaee</a></p>
-            <p>Google Scholar: <a href="https://scholar.google.com/citations?user=kYl9IWkAAAAJ&hl=en" target="_blank" class="text-blue-600">Sepehr Rezaee</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/sepehr-rezaee/" target="_blank" class="text-blue-600">sepehr-rezaee</a></p>
-        </div>
-
-        <!-- Education Section -->
-        <div class="mt-8">
-            <h2 class="text-2xl font-semibold">Education</h2>
-            <p>Bachelor of Science in Computer Science, The National University of Iran, Tehran (2021-2025)</p>
-            <p>Focus: Deep Learning, Machine Learning, and AI Safety</p>
-        </div>
-
-        <!-- Publications Section -->
-        <div class="mt-8">
-            <h2 class="text-2xl font-semibold">Publications</h2>
-            <ul class="list-disc list-inside">
-                <li>Backdooring Out-of-Distribution Detection Methods: A Novel Attack Approach. Submitted to NeurIPS 2024.</li>
-                <li>Scanning Trojaned Models Using Out-of-Distribution Samples. Submitted to NeurIPS 2024.</li>
-                <li>Toward Robust Novelty Detection Under Style Shifts. Submitted to NeurIPS 2024.</li>
-                <li>Comparison of Pre-training and Classification Models for Early Detection of Alzheimer’s Disease Using MRI. Presented at the 8th International Conference on Combinatorics, Cryptography, Computer Science, and Computation, Iran, 2023.</li>
-                <li>Unsupervised Algorithms: Clustering (with Implementation). Chapter in the book Hierarchical Clustering Methods, Aarvan Publications, 2022.</li>
-            </ul>
-        </div>
-
-        <!-- Professional Experience Section -->
-        <div class="mt-8">
-            <h2 class="text-2xl font-semibold">Professional Experience</h2>
-            <ul class="list-disc list-inside">
-                <li>Research Assistant, Robust and Interpretable Machine Learning Lab, Sharif University of Technology, Tehran (2024–Present)</li>
-                <li>Research Assistant, Artificial Intelligence and Scientific Computing Lab, Tehran (2021–Present)</li>
-                <li>Deep Learning and Neuroscience Intern Researcher, Institute for Research in Fundamental Sciences (IPM), Tehran (2023–2024)</li>
-                <li>Project Manager, NovaVira, Tehran (2023–2024)</li>
-                <li>System Engineer, Mohaymen ICT Company, Tehran (2022)</li>
-                <li>Process Developer, Mohaymen ICT Company, Tehran (2022)</li>
-                <li>Software Quality Assurance Tester, VALMART (Online Exchange), Tehran (2021)</li>
-            </ul>
-        </div>
-
-        <!-- Skills & Proficiencies Section -->
-        <div class="mt-8">
-            <h2 class="text-2xl font-semibold">Skills & Proficiencies</h2>
-            <p>Deep Learning, Machine Learning, Image Processing, Data Science, LLM, Computational Neuroscience, Software Engineering, Project Management, Teaching, System Engineering, Version Control</p>
-        </div>
-    </div>
-
-    <!-- Bootstrap 5 JS and Popper.js CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-
     <script>
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        const body = document.body;
-
-        themeToggleBtn.addEventListener('click', () => {
-            if (body.classList.contains('light-mode')) {
-                body.classList.remove('light-mode');
-                body.classList.add('dark-mode');
+        function toggleTheme() {
+            const htmlElement = document.documentElement;
+            const isDarkMode = htmlElement.classList.contains('dark');
+            if (isDarkMode) {
+                htmlElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
             } else {
-                body.classList.remove('dark-mode');
-                body.classList.add('light-mode');
+                htmlElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            if (savedTheme === 'dark') {
+                document.documentElement.classList.add('dark');
             }
         });
     </script>
+</head>
+
+<body class="bg-white text-black dark:bg-black dark:text-white font-sans leading-normal tracking-normal">
+    <div class="max-w-4xl mx-auto p-6">
+        <!-- Theme Toggle Button -->
+        <div class="flex justify-end mb-4">
+            <button onclick="toggleTheme()" class="p-2 bg-gray-200 dark:bg-gray-800 rounded-md">
+                <svg id="theme-icon" class="w-6 h-6 text-black dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 2.5V4.5m0 15v2a9 9 0 110-18v2m0 12.5l-3-3m6 3l-3-3m6-3l-3 3m-6-3l-3 3m6-6l-3 3m6-3l-3 3">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold rainbow-text">Sepehr Rezaee</h1>
+            <p class="mt-2">B.S. of Computer Science</p>
+        </header>
+
+        <!-- Contact Buttons -->
+        <div class="flex justify-center space-x-4 mb-12">
+            <a href="mailto:sepehrrezaee2002@gmail.com" class="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600">Email</a>
+            <a href="https://github.com/SepehrRezaee" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">GitHub</a>
+            <a href="https://scholar.google.com/citations?user=kYl9IWkAAAAJ&hl=en" class="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600">Google Scholar</a>
+            <a href="https://www.linkedin.com/in/sepehr-rezaee" class="px-4 py-2 bg-yellow-500 text-white rounded-md hover:bg-yellow-600">LinkedIn</a>
+        </div>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">Education</h2>
+            <p><strong>2021–2025:</strong> Bachelor of Science in Computer Science, The National University of Iran, Tehran</p>
+            <p><strong>2019–2021:</strong> Math Diploma, GPA: 3.87/4 (19.37/20.0), Allameh Tabatabaei (Advanced) High School, Tehran</p>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">Publications</h2>
+            <ul class="list-disc list-inside">
+                <li>2024: “Backdooring Out-of-Distribution Detection Methods: A Novel Attack Approach”. Submitted to NeurIPS 2024.</li>
+                <li>2024: “Scanning Trojaned Models Using Out-of-Distribution Samples”. Submitted to NeurIPS 2024.</li>
+                <li>2024: “Toward Robust Novelty Detection Under Style Shifts”. Submitted to NeurIPS 2024.</li>
+                <li>2023: “Comparison of pre-training and classification models for early detection of Alzheimer’s disease”. Presented at the 8th International Conference on Combinatorics, Cryptography, Computer Science and Computation, Iran, 2023.</li>
+                <li>2022: “Unsupervised Algorithms: Clustering (with Implementation)”. Chapter in the book Hierarchical Clustering Methods, Aarvan Publications.</li>
+            </ul>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">Professional Experience</h2>
+            <ul class="list-disc list-inside">
+                <li><strong>2024–Present:</strong> Research Assistant, Robust and Interpretable Machine Learning Lab, Sharif University of Technology, Tehran.</li>
+                <li><strong>2021–Present:</strong> Research Assistant, Artificial Intelligence and Scientific Computing Lab, Tehran.</li>
+                <li><strong>2023–2024:</strong> Deep Learning and Neuroscience Intern Researcher, Institute for Research in Fundamental Sciences (IPM), Tehran.</li>
+                <li><strong>2023–2024:</strong> Project Manager, NovaVira, Tehran.</li>
+                <li><strong>2022:</strong> System Engineer, Mohaymen ICT Company, Tehran.</li>
+                <li><strong>2022:</strong> Process Developer, Mohaymen ICT Company, Tehran.</li>
+                <li><strong>2021:</strong> Software Quality Assurance Tester, VALMART (Online Exchange), Tehran.</li>
+            </ul>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">Skills & Proficiencies</h2>
+            <ul class="list-disc list-inside">
+                <li>Deep Learning, Machine Learning, Image Processing, Data Science, LLM</li>
+                <li>Python, PyTorch, TensorFlow, JAX, Scikit-Learn, NumPy, MATLAB, C++, C, Django</li>
+                <li>System Engineering, Project Management, Teaching</li>
+                <li>Fluent in Persian, Professional working proficiency in English</li>
+            </ul>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">Awards & Honors</h2>
+            <ul class="list-disc list-inside">
+                <li>2023: Best Ideator Award, 7th National Young Scientists Festival.</li>
+                <li>2021: Ranked among the top 0.5% of the 150,000 students who participated in the entrance exam.</li>
+            </ul>
+        </section>
+
+        <footer class="text-center mt-12">
+            <p>© 2024 Sepehr Rezaee</p>
+        </footer>
+    </div>
 </body>
 
 </html>
