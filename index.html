@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -48,49 +48,112 @@
             max-width: 150px;
             margin: 0 auto;
         }
+
+        /* Dark Theme Styles */
+        body.dark {
+            background-color: #000;
+            color: #fff;
+        }
+
+        /* Light Theme Styles */
+        body {
+            background-color: #fff;
+            color: #000;
+        }
+
+        a {
+            color: #1e90ff; /* Lighter blue for links */
+        }
+
+        a:hover {
+            color: #87cefa; /* Even lighter on hover */
+        }
+
+        .bg-red-500 {
+            background-color: #ff4500; /* Darker red */
+        }
+
+        .bg-blue-500 {
+            background-color: #1e90ff; /* Blue for buttons */
+        }
+
+        .bg-green-500 {
+            background-color: #32cd32; /* Darker green */
+        }
+
+        .bg-yellow-500 {
+            background-color: #ffd700; /* Gold for buttons */
+        }
+
+        .hover\:bg-red-600:hover {
+            background-color: #dc143c; /* Crimson */
+        }
+
+        .hover\:bg-blue-600:hover {
+            background-color: #4682b4; /* Steel blue */
+        }
+
+        .hover\:bg-green-600:hover {
+            background-color: #228b22; /* Forest green */
+        }
+
+        .hover\:bg-yellow-600:hover {
+            background-color: #ff8c00; /* Dark orange */
+        }
+
+        .hover\:text-gray-600:hover {
+            color: #b0c4de; /* Light steel blue */
+        }
+
+        .rounded-md {
+            border-radius: 0.375rem;
+        }
     </style>
     <script>
         function toggleTheme() {
             const htmlElement = document.documentElement;
             const isDarkMode = htmlElement.classList.contains('dark');
-
+    
             if (isDarkMode) {
                 htmlElement.classList.remove('dark');
                 localStorage.setItem('theme', 'light');
                 document.getElementById('theme-icon').innerHTML = `
-                    <path fill="currentColor" d="M12 4.5A7.5 7.5 0 1 1 4.5 12 7.5 7.5 0 0 1 12 4.5m0-2A9.5 9.5 0 1 0 21.5 12 9.5 9.5 0 0 0 12 2.5z"></path>
-                    <circle cx="12" cy="12" r="1.5"></circle>`;
+                    <path fill="currentColor" d="M12 3.1a9 9 0 0 0 0 17.8A9 9 0 0 1 12 3.1z"></path>`;
             } else {
                 htmlElement.classList.add('dark');
                 localStorage.setItem('theme', 'dark');
                 document.getElementById('theme-icon').innerHTML = `
-                    <path fill="currentColor" d="M12 3.1a9 9 0 0 0 0 17.8A9 9 0 0 1 12 3.1z"></path>`;
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const savedTheme = localStorage.getItem('theme') || 'light';
-            const htmlElement = document.documentElement;
-
-            if (savedTheme === 'dark') {
-                htmlElement.classList.add('dark');
-                document.getElementById('theme-icon').innerHTML = `
-                    <path fill="currentColor" d="M12 3.1a9 9 0 0 0 0 17.8A9 9 0 0 1 12 3.1z"></path>`;
-            } else {
-                document.getElementById('theme-icon').innerHTML = `
                     <path fill="currentColor" d="M12 4.5A7.5 7.5 0 1 1 4.5 12 7.5 7.5 0 0 1 12 4.5m0-2A9.5 9.5 0 1 0 21.5 12 9.5 9.5 0 0 0 12 2.5z"></path>
                     <circle cx="12" cy="12" r="1.5"></circle>`;
             }
+        }
+    
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            const htmlElement = document.documentElement;
+    
+            if (savedTheme === 'dark') {
+                htmlElement.classList.add('dark');
+                document.getElementById('theme-icon').innerHTML = `
+                    <path fill="currentColor" d="M12 4.5A7.5 7.5 0 1 1 4.5 12 7.5 7.5 0 0 1 12 4.5m0-2A9.5 9.5 0 1 0 21.5 12 9.5 9.5 0 0 0 12 2.5z"></path>
+                    <circle cx="12" cy="12" r="1.5"></circle>`;
+            } else {
+                document.getElementById('theme-icon').innerHTML = `
+                    <path fill="currentColor" d="M12 3.1a9 9 0 0 0 0 17.8A9 9 0 0 1 12 3.1z"></path>`;
+            }
         });
     </script>
+    
 </head>
 
-<body class="bg-white text-black dark:bg-black dark:text-white font-sans leading-normal tracking-normal">
+<body class="font-sans leading-normal tracking-normal">
     <div class="max-w-4xl mx-auto p-6">
         <!-- Theme Toggle Button -->
         <div class="flex justify-end mb-4">
-            <button id="theme-button" onclick="toggleTheme()" class="p-2 bg-gray-200 dark:bg-gray-800 rounded-md" aria-label="Switch to dark mode">
-                <svg id="theme-icon" class="w-6 h-6" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>
+            <button id="theme-button" onclick="toggleTheme()" class="p-2 bg-gray-800 rounded-md" aria-label="Switch to light mode">
+                <svg id="theme-icon" class="w-6 h-6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="currentColor" d="M12 3.1a9 9 0 0 0 0 17.8A9 9 0 0 1 12 3.1z"></path>
+                </svg>
             </button>
         </div>
 
@@ -121,7 +184,6 @@
                 <a href="https://drive.google.com/file/d/1XlKyGCE-YM7uVQN14Nq56Y5q_cR_egMQ/view?usp=sharing" class="px-4 py-2 bg-gray-500 text-white rounded-md hover:text-gray-600">CV</a>
             </div>
         </div>
-
 
         <section class="mb-12">
             <h2 class="text-2xl font-semibold mb-4">Education</h2>
