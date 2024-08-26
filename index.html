@@ -1,46 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark" style="color-scheme: dark;">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sepehr Rezaee</title>
+    <title>Mohammad Jafari - Sepehr Rezaee</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./SR.svg">
+    <link rel="icon" type="image/svg+xml" href="/student.svg">
+
+    <!-- Stylesheets -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="icon" href="./SR.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/index-868bd8c.css">
+
+    <!-- CSS for Global Data -->
+    <style data-emotion="css-global" data-sx="">
+    </style>
+    <style data-emotion="css-global" data-sx="">
+    </style>
+    <style data-emotion="css" data-sx="">
+    </style>
+    <style data-emotion="css" data-sx="">
+    </style>
+
+    <!-- Custom Styles -->
     <style>
         @keyframes rainbow {
-            0% {
-                color: red;
-            }
-
-            16% {
-                color: orange;
-            }
-
-            32% {
-                color: yellow;
-            }
-
-            48% {
-                color: green;
-            }
-
-            64% {
-                color: blue;
-            }
-
-            80% {
-                color: indigo;
-            }
-
-            100% {
-                color: violet;
-            }
+            0% { color: red; }
+            16% { color: orange; }
+            32% { color: yellow; }
+            48% { color: green; }
+            64% { color: blue; }
+            80% { color: indigo; }
+            100% { color: violet; }
         }
 
-        .rainbow-text {
-            animation: rainbow 5s linear infinite;
-        }
+        .rainbow-text { animation: rainbow 5s linear infinite; }
 
         .grayscale-img {
             filter: grayscale(100%);
@@ -50,69 +46,45 @@
         }
 
         /* Dark Theme Styles */
-        body.dark {
-            background-color: #000;
-            color: #fff;
-        }
+        body.dark { background-color: #000; color: #fff; }
 
         /* Light Theme Styles */
-        body {
-            background-color: #fff;
-            color: #000;
-        }
+        body { background-color: #fff; color: #000; }
 
-        a {
-            color: #1e90ff; /* Lighter blue for links */
-        }
+        a { color: #1e90ff; }
+        a:hover { color: #87cefa; }
 
-        a:hover {
-            color: #87cefa; /* Even lighter on hover */
-        }
+        .bg-red-500 { background-color: #ff4500; }
+        .bg-blue-500 { background-color: #1e90ff; }
+        .bg-green-500 { background-color: #32cd32; }
+        .bg-yellow-500 { background-color: #ffd700; }
 
-        .bg-red-500 {
-            background-color: #ff4500; /* Darker red */
-        }
+        .hover\:bg-red-600:hover { background-color: #dc143c; }
+        .hover\:bg-blue-600:hover { background-color: #4682b4; }
+        .hover\:bg-green-600:hover { background-color: #228b22; }
+        .hover\:bg-yellow-600:hover { background-color: #ff8c00; }
 
-        .bg-blue-500 {
-            background-color: #1e90ff; /* Blue for buttons */
-        }
+        .hover\:text-gray-600:hover { color: #b0c4de; }
 
-        .bg-green-500 {
-            background-color: #32cd32; /* Darker green */
-        }
-
-        .bg-yellow-500 {
-            background-color: #ffd700; /* Gold for buttons */
-        }
-
-        .hover\:bg-red-600:hover {
-            background-color: #dc143c; /* Crimson */
-        }
-
-        .hover\:bg-blue-600:hover {
-            background-color: #4682b4; /* Steel blue */
-        }
-
-        .hover\:bg-green-600:hover {
-            background-color: #228b22; /* Forest green */
-        }
-
-        .hover\:bg-yellow-600:hover {
-            background-color: #ff8c00; /* Dark orange */
-        }
-
-        .hover\:text-gray-600:hover {
-            color: #b0c4de; /* Light steel blue */
-        }
-
-        .rounded-md {
-            border-radius: 0.375rem;
-        }
+        .rounded-md { border-radius: 0.375rem; }
     </style>
-</head>
 
-<body id="root" class="font-sans leading-normal tracking-normal">
-    <!-- Chakra UI theme initializer -->
+    <!-- Scripts -->
+    <script async src="https://clustrmaps.com/globe_call_home.js?callback=jQuery11240722657702_770763984&d=TU08NWGh-Bp3p30wl2J2UgJvaob5wyMNHfbxlSi88&w=100&h=1724660770764"></script>
+    <script type="module" crossorigin src="/assets/index-cb44d1cd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        (function () {
+            try {
+                if (location.hash && location.hash.length > 1) {
+                    var pathAndQuery = location.hash.slice(1);
+                    window.history.replaceState(null, '', pathAndQuery);
+                }
+            } catch (a) {}
+        })();
+    </script>
+
+    <!-- Chakra UI Theme Script -->
     <script id="chakra-script">
         !(function () {
             try {
@@ -137,9 +109,11 @@
             } catch (a) { }
         })();
     </script>
+</head>
 
-    <!-- Theme Toggle Button -->
+<body id="root" class="font-sans leading-normal tracking-normal">
     <div class="max-w-4xl mx-auto p-6">
+        <!-- Theme Toggle Button -->
         <div class="flex justify-end mb-4">
             <button id="theme-button" onclick="toggleTheme()" class="p-2 bg-gray-800 rounded-md" aria-label="Switch to light mode">
                 <svg id="theme-icon" class="w-6 h-6" fill="none" xmlns="http://www.w3.org/2000/svg">
