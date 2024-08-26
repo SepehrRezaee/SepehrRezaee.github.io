@@ -14,28 +14,46 @@
     <link rel="stylesheet" href="/assets/index-868bd8c.css">
 
     <!-- CSS for Global Data -->
-    <style data-emotion="css-global" data-sx="">
-    </style>
-    <style data-emotion="css-global" data-sx="">
-    </style>
-    <style data-emotion="css" data-sx="">
-    </style>
-    <style data-emotion="css" data-sx="">
-    </style>
+    <style data-emotion="css-global" data-sx=""></style>
+    <style data-emotion="css-global" data-sx=""></style>
+    <style data-emotion="css" data-sx=""></style>
+    <style data-emotion="css" data-sx=""></style>
 
     <!-- Custom Styles -->
     <style>
         @keyframes rainbow {
-            0% { color: red; }
-            16% { color: orange; }
-            32% { color: yellow; }
-            48% { color: green; }
-            64% { color: blue; }
-            80% { color: indigo; }
-            100% { color: violet; }
+            0% {
+                color: red;
+            }
+
+            16% {
+                color: orange;
+            }
+
+            32% {
+                color: yellow;
+            }
+
+            48% {
+                color: green;
+            }
+
+            64% {
+                color: blue;
+            }
+
+            80% {
+                color: indigo;
+            }
+
+            100% {
+                color: violet;
+            }
         }
 
-        .rainbow-text { animation: rainbow 5s linear infinite; }
+        .rainbow-text {
+            animation: rainbow 5s linear infinite;
+        }
 
         .grayscale-img {
             filter: grayscale(100%);
@@ -45,27 +63,64 @@
         }
 
         /* Dark Theme Styles */
-        body.dark { background-color: #000; color: #fff; }
+        body.dark {
+            background-color: #000;
+            color: #fff;
+        }
 
         /* Light Theme Styles */
-        body { background-color: #fff; color: #000; }
+        body {
+            background-color: #fff;
+            color: #000;
+        }
 
-        a { color: #1e90ff; }
-        a:hover { color: #87cefa; }
+        a {
+            color: #1e90ff;
+        }
 
-        .bg-red-500 { background-color: #ff4500; }
-        .bg-blue-500 { background-color: #1e90ff; }
-        .bg-green-500 { background-color: #32cd32; }
-        .bg-yellow-500 { background-color: #ffd700; }
+        a:hover {
+            color: #87cefa;
+        }
 
-        .hover\:bg-red-600:hover { background-color: #dc143c; }
-        .hover\:bg-blue-600:hover { background-color: #4682b4; }
-        .hover\:bg-green-600:hover { background-color: #228b22; }
-        .hover\:bg-yellow-600:hover { background-color: #ff8c00; }
+        .bg-red-500 {
+            background-color: #ff4500;
+        }
 
-        .hover\:text-gray-600:hover { color: #b0c4de; }
+        .bg-blue-500 {
+            background-color: #1e90ff;
+        }
 
-        .rounded-md { border-radius: 0.375rem; }
+        .bg-green-500 {
+            background-color: #32cd32;
+        }
+
+        .bg-yellow-500 {
+            background-color: #ffd700;
+        }
+
+        .hover\:bg-red-600:hover {
+            background-color: #dc143c;
+        }
+
+        .hover\:bg-blue-600:hover {
+            background-color: #4682b4;
+        }
+
+        .hover\:bg-green-600:hover {
+            background-color: #228b22;
+        }
+
+        .hover\:bg-yellow-600:hover {
+            background-color: #ff8c00;
+        }
+
+        .hover\:text-gray-600:hover {
+            color: #b0c4de;
+        }
+
+        .rounded-md {
+            border-radius: 0.375rem;
+        }
     </style>
 
     <!-- Scripts -->
@@ -105,38 +160,85 @@
                 document.documentElement.style.colorScheme = r;
                 document.documentElement.dataset.theme = r;
                 localStorage.setItem("chakra-ui-color-mode", r);
-            } catch (a) { }
+            } catch (a) {}
         })();
     </script>
 </head>
 
 <body id="root" class="font-sans leading-normal tracking-normal">
     <div class="max-w-4xl mx-auto p-6">
-        <!-- Theme Toggle Button -->
-        <div class="flex justify-end mb-4">
-            <button id="theme-button" onclick="toggleTheme()" class="p-2 bg-gray-800 rounded-md" aria-label="Switch to light mode">
-                <svg id="theme-icon" class="w-6 h-6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill="currentColor" d="M12 3.1a9 9 0 0 0 0 17.8A9 9 0 0 1 12 3.1z"></path>
-                </svg>
-            </button>
+        <!-- Navbar (Tabs) -->
+        <div class="chakra-stack css-lvyqmr7">
+            <div class="chakra-tabs css-1yxprilb">
+                <div role="tablist" aria-orientation="horizontal" class="chakra-tabs__tablist css-1uw5bnh">
+                    <button type="button" id="tabs--r14--tab-0" role="tab" tabindex="0" aria-selected="true" aria-controls="tabs--r14--tabpanel-0" class="chakra-tabs__tab css-llwm2wx" data-index="0">About</button>
+                    <button type="button" id="tabs--r14--tab-1" role="tab" tabindex="-1" aria-selected="false" aria-controls="tabs--r14--tabpanel-1" class="chakra-tabs__tab css-llwm2wx" data-index="1">Publications</button>
+                    <button type="button" id="tabs--r14--tab-2" role="tab" tabindex="-1" aria-selected="false" aria-controls="tabs--r14--tabpanel-2" class="chakra-tabs__tab css-llwm2wx" data-index="2">Experiences</button>
+                    <button type="button" id="tabs--r14--tab-3" role="tab" tabindex="-1" aria-selected="false" aria-controls="tabs--r14--tabpanel-3" class="chakra-tabs__tab css-llwm2wx" data-index="3">Projects</button>
+                </div>
+                <div class="chakra-tabs__tab-indicator css-11zt826" style="position: absolute; transition-property: left, right, top, bottom, height, width; transition-duration: 200ms; transition-timing-function: cubic-bezier(0, 0, 0.2, 1); left: 0px; width: 75px;"></div>
+            </div>
+        </div>
+
+        <!-- Content Sections -->
+        <div id="tabs--r14--tabpanel-0" role="tabpanel" class="css-17xejub">
+            <header class="text-center mb-12">
+                <h1 class="text-4xl font-bold rainbow-text">Sepehr Rezaee</h1>
+                <p class="mt-2">
+                    I am a final-year <strong>BSc student</strong> at the <strong>National University of Iran</strong>, specializing in
+                    <strong>computer science</strong> with a strong emphasis on <strong>deep learning</strong>, <strong>machine learning</strong>,
+                    and <strong>AI safety</strong>. My research focuses on developing robust and interpretable machine learning models, aiming to
+                    enhance the reliability and scalability of AI systems. My academic journey has nurtured a keen interest in <strong>machine learning</strong>,
+                    <strong>deep learning</strong>, <strong>computer vision</strong>, and <strong>AI safety</strong>. As a researcher, I strive to create
+                    efficient, resilient solutions that address complex challenges in these fields, with a particular focus on robustness and optimization.
+                </p>
+            </header>
+        </div>
+
+        <div id="tabs--r14--tabpanel-1" role="tabpanel" class="css-17xejub">
+            <section class="mb-12">
+                <h2 class="text-2xl font-semibold mb-4">Publications</h2>
+                <ul class="list-disc list-inside">
+                    <li>2024: “Backdooring Out-of-Distribution Detection Methods: A Novel Attack Approach”. Submitted to NeurIPS 2024.</li>
+                    <li>2024: “Scanning Trojaned Models Using Out-of-Distribution Samples”. Submitted to NeurIPS 2024.</li>
+                    <li>2024: “Toward Robust Novelty Detection Under Style Shifts”. Submitted to NeurIPS 2024.</li>
+                    <li>2023: “Comparison of pre-training and classification models for early detection of Alzheimer’s disease”. Presented at the 8th International Conference on Combinatorics, Cryptography, Computer Science and Computation, Iran, 2023.</li>
+                    <li>2022: “Unsupervised Algorithms: Clustering (with Implementation)”. Chapter in the book Hierarchical Clustering Methods, Aarvan Publications.</li>
+                </ul>
+            </section>
+        </div>
+
+        <div id="tabs--r14--tabpanel-2" role="tabpanel" class="css-17xejub">
+            <section class="mb-12">
+                <h2 class="text-2xl font-semibold mb-4">Professional Experience</h2>
+                <ul class="list-disc list-inside">
+                    <li><strong>2024–Present:</strong> Research Assistant, Robust and Interpretable Machine Learning Lab, Sharif University of Technology, Tehran.</li>
+                    <li><strong>2021–Present:</strong> Research Assistant, Artificial Intelligence and Scientific Computing Lab, Tehran.</li>
+                    <li><strong>2023–2024:</strong> Deep Learning and Neuroscience Intern Researcher, Institute for Research in Fundamental Sciences (IPM), Tehran.</li>
+                    <li><strong>2023–2024:</strong> Project Manager, NovaVira, Tehran.</li>
+                    <li><strong>2022:</strong> System Engineer, Mohaymen ICT Company, Tehran.</li>
+                    <li><strong>2022:</strong> Process Developer, Mohaymen ICT Company, Tehran.</li>
+                    <li><strong>2021:</strong> Software Quality Assurance Tester, VALMART (Online Exchange), Tehran.</li>
+                </ul>
+            </section>
+        </div>
+
+        <div id="tabs--r14--tabpanel-3" role="tabpanel" class="css-17xejub">
+            <section class="mb-12">
+                <h2 class="text-2xl font-semibold mb-4">Projects</h2>
+                <ul class="list-disc list-inside">
+                    <li>2024: Project A - Description of project A...</li>
+                    <li>2023: Project B - Description of project B...</li>
+                    <li>2022: Project C - Description of project C...</li>
+                    <li>2021: Project D - Description of project D...</li>
+                </ul>
+            </section>
         </div>
 
         <!-- Grayscale Image -->
         <div class="flex justify-center mb-4">
             <img src="./sepehrrezaee.png" alt="Sepehr Rezaee" class="grayscale-img">
         </div>
-
-        <header class="text-center mb-12">
-            <h1 class="text-4xl font-bold rainbow-text">Sepehr Rezaee</h1>
-            <p class="mt-2">
-                I am a final-year <strong>BSc student</strong> at the <strong>National University of Iran</strong>, specializing in
-                <strong>computer science</strong> with a strong emphasis on <strong>deep learning</strong>, <strong>machine learning</strong>,
-                and <strong>AI safety</strong>. My research focuses on developing robust and interpretable machine learning models, aiming to
-                enhance the reliability and scalability of AI systems. My academic journey has nurtured a keen interest in <strong>machine learning</strong>,
-                <strong>deep learning</strong>, <strong>computer vision</strong>, and <strong>AI safety</strong>. As a researcher, I strive to create
-                efficient, resilient solutions that address complex challenges in these fields, with a particular focus on robustness and optimization.
-            </p>
-        </header>
 
         <!-- Contact Buttons -->
         <div class="flex justify-center mb-12">
@@ -148,54 +250,6 @@
                 <a href="./SepehrRezaee_CV.pdf" class="px-4 py-2 bg-gray-500 text-white rounded-md hover:text-gray-600">CV</a>
             </div>
         </div>
-
-        <section class="mb-12">
-            <h2 class="text-2xl font-semibold mb-4">Education</h2>
-            <p><strong>2021–2025:</strong> Bachelor of Science in Computer Science, The National University of Iran, Tehran</p>
-            <p><strong>2019–2021:</strong> Math Diploma, GPA: 3.87/4 (19.37/20.0), Allameh Tabatabaei (Advanced) High School, Tehran</p>
-        </section>
-
-        <section class="mb-12">
-            <h2 class="text-2xl font-semibold mb-4">Publications</h2>
-            <ul class="list-disc list-inside">
-                <li>2024: “Backdooring Out-of-Distribution Detection Methods: A Novel Attack Approach”. Submitted to NeurIPS 2024.</li>
-                <li>2024: “Scanning Trojaned Models Using Out-of-Distribution Samples”. Submitted to NeurIPS 2024.</li>
-                <li>2024: “Toward Robust Novelty Detection Under Style Shifts”. Submitted to NeurIPS 2024.</li>
-                <li>2023: “Comparison of pre-training and classification models for early detection of Alzheimer’s disease”. Presented at the 8th International Conference on Combinatorics, Cryptography, Computer Science and Computation, Iran, 2023.</li>
-                <li>2022: “Unsupervised Algorithms: Clustering (with Implementation)”. Chapter in the book Hierarchical Clustering Methods, Aarvan Publications.</li>
-            </ul>
-        </section>
-
-        <section class="mb-12">
-            <h2 class="text-2xl font-semibold mb-4">Professional Experience</h2>
-            <ul class="list-disc list-inside">
-                <li><strong>2024–Present:</strong> Research Assistant, Robust and Interpretable Machine Learning Lab, Sharif University of Technology, Tehran.</li>
-                <li><strong>2021–Present:</strong> Research Assistant, Artificial Intelligence and Scientific Computing Lab, Tehran.</li>
-                <li><strong>2023–2024:</strong> Deep Learning and Neuroscience Intern Researcher, Institute for Research in Fundamental Sciences (IPM), Tehran.</li>
-                <li><strong>2023–2024:</strong> Project Manager, NovaVira, Tehran.</li>
-                <li><strong>2022:</strong> System Engineer, Mohaymen ICT Company, Tehran.</li>
-                <li><strong>2022:</strong> Process Developer, Mohaymen ICT Company, Tehran.</li>
-                <li><strong>2021:</strong> Software Quality Assurance Tester, VALMART (Online Exchange), Tehran.</li>
-            </ul>
-        </section>
-
-        <section class="mb-12">
-            <h2 class="text-2xl font-semibold mb-4">Skills & Proficiencies</h2>
-            <ul class="list-disc list-inside">
-                <li>Deep Learning, Machine Learning, Image Processing, Data Science, LLM</li>
-                <li>Python, PyTorch, TensorFlow, JAX, Scikit-Learn, NumPy, MATLAB, C++, C, Django</li>
-                <li>System Engineering, Project Management, Teaching</li>
-                <li>Fluent in Persian, Professional working proficiency in English</li>
-            </ul>
-        </section>
-
-        <section class="mb-12">
-            <h2 class="text-2xl font-semibold mb-4">Awards & Honors</h2>
-            <ul class="list-disc list-inside">
-                <li>2023: Best Ideator Award, 7th National Young Scientists Festival.</li>
-                <li>2021: Ranked among the top 0.5% of the 150,000 students who participated in the entrance exam.</li>
-            </ul>
-        </section>
 
         <footer class="text-center mt-12">
             <p>All rights reserved © 2024 Sepehr Rezaee</p>
