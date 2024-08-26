@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -109,46 +109,37 @@
             border-radius: 0.375rem;
         }
     </style>
-    <script>
-        function toggleTheme() {
-            const htmlElement = document.documentElement;
-            const isDarkMode = htmlElement.classList.contains('dark');
-    
-            if (isDarkMode) {
-                htmlElement.classList.remove('dark');
-                localStorage.setItem('theme', 'light');
-                document.getElementById('theme-icon').innerHTML = `
-                    <path fill="currentColor" d="M12 3.1a9 9 0 0 0 0 17.8A9 9 0 0 1 12 3.1z"></path>`;
-            } else {
-                htmlElement.classList.add('dark');
-                localStorage.setItem('theme', 'dark');
-                document.getElementById('theme-icon').innerHTML = `
-                    <path fill="currentColor" d="M12 4.5A7.5 7.5 0 1 1 4.5 12 7.5 7.5 0 0 1 12 4.5m0-2A9.5 9.5 0 1 0 21.5 12 9.5 9.5 0 0 0 12 2.5z"></path>
-                    <circle cx="12" cy="12" r="1.5"></circle>`;
-            }
-        }
-    
-        document.addEventListener('DOMContentLoaded', () => {
-            const savedTheme = localStorage.getItem('theme') || 'light';
-            const htmlElement = document.documentElement;
-    
-            if (savedTheme === 'dark') {
-                htmlElement.classList.add('dark');
-                document.getElementById('theme-icon').innerHTML = `
-                    <path fill="currentColor" d="M12 4.5A7.5 7.5 0 1 1 4.5 12 7.5 7.5 0 0 1 12 4.5m0-2A9.5 9.5 0 1 0 21.5 12 9.5 9.5 0 0 0 12 2.5z"></path>
-                    <circle cx="12" cy="12" r="1.5"></circle>`;
-            } else {
-                document.getElementById('theme-icon').innerHTML = `
-                    <path fill="currentColor" d="M12 3.1a9 9 0 0 0 0 17.8A9 9 0 0 1 12 3.1z"></path>`;
-            }
-        });
-    </script>
-    
 </head>
 
-<body class="font-sans leading-normal tracking-normal">
+<body id="root" class="font-sans leading-normal tracking-normal">
+    <!-- Chakra UI theme initializer -->
+    <script id="chakra-script">
+        !(function () {
+            try {
+                var a = function (c) {
+                    var v = '(prefers-color-scheme: dark)',
+                        h = window.matchMedia(v).matches ? "dark" : "light",
+                        r = c === "system" ? h : c,
+                        o = document.documentElement,
+                        s = document.body,
+                        l = "chakra-ui-light",
+                        d = "chakra-ui-dark",
+                        i = r === "dark";
+                    return i
+                        ? s.classList.add(d), s.classList.remove(l)
+                        : s.classList.remove(d), s.classList.add(l);
+                };
+                var r = localStorage.getItem("chakra-ui-color-mode") || (window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light");
+                a(r);
+                document.documentElement.style.colorScheme = r;
+                document.documentElement.dataset.theme = r;
+                localStorage.setItem("chakra-ui-color-mode", r);
+            } catch (a) { }
+        })();
+    </script>
+
+    <!-- Theme Toggle Button -->
     <div class="max-w-4xl mx-auto p-6">
-        <!-- Theme Toggle Button -->
         <div class="flex justify-end mb-4">
             <button id="theme-button" onclick="toggleTheme()" class="p-2 bg-gray-800 rounded-md" aria-label="Switch to light mode">
                 <svg id="theme-icon" class="w-6 h-6" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -237,6 +228,16 @@
             <p>All rights reserved © 2024 Sepehr Rezaee</p>
         </footer>
     </div>
+
+    <!-- Theme Toggle Script -->
+    <script>
+        function toggleTheme() {
+            const currentTheme = localStorage.getItem('chakra-ui-color-mode');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('chakra-ui-color-mode', newTheme);
+            location.reload(); // Reload the page to apply the new theme
+        }
+    </script>
 </body>
 
 </html>
