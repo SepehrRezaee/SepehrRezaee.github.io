@@ -3,13 +3,13 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #f8f9fa;
+    color: #ecf0f1;
+    background-color: #111;
 }
 
 h2 {
     font-size: 2.5rem;
-    color: #2c3e50;
+    color: #ecf0f1;
     text-align: center;
     margin-bottom: 1rem;
 }
@@ -72,7 +72,7 @@ h2 {
     align-items: center;
     flex-direction: column;
     padding: 60px 20px;
-    background-color: #f8f9fa; /* or any background color you prefer */
+    background-color: #222; /* Dark background for the hero section */
     text-align: center;
 }
 
@@ -91,26 +91,26 @@ h2 {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #2c3e50;
+    border: 4px solid #ecf0f1;
 }
 
 .hero h1 {
     font-size: 3rem;
-    color: #2c3e50;
+    color: #ecf0f1;
     margin-bottom: 10px;
 }
 
 .hero p {
     font-size: 1.2rem;
-    color: #34495e;
+    color: #bdc3c7;
 }
 
 /* About and Contact Section */
 #about-contact {
     padding: 60px 20px;
-    background-color: #ffffff;
+    background-color: #222; /* Dark background for the about/contact section */
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -123,7 +123,7 @@ h2 {
 
 .intro-text {
     font-size: 1.5rem;
-    color: #2c3e50;
+    color: #ecf0f1;
     margin-bottom: 10px;
 }
 
@@ -143,7 +143,7 @@ h2 {
     margin-top: 20px;
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #34495e;
+    color: #bdc3c7;
 }
 
 .contact-info {
@@ -162,7 +162,7 @@ h2 {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #2c3e50;
+    border: 4px solid #ecf0f1;
 }
 
 .button-container {
@@ -172,74 +172,12 @@ h2 {
     gap: 10px;
 }
 
-.btn {
-    display: flex;
-    align-items: center;
-    background-color: #2980b9;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
-}
-
-.btn svg {
-    margin-right: 10px;
-}
-
-.btn:hover {
-    background-color: #1c6693;
-}
-
-/* Button Colors */
-.btn-cv {
-    background-color: #D05A45;
-}
-
-.btn-cv:hover {
-    background-color: #B44C39;
-}
-
-.btn-scholar {
-    background-color: #8746DC;
-}
-
-.btn-scholar:hover {
-    background-color: #6F38B2;
-}
-
-.btn-github {
-    background-color: #28a745; /* Green color */
-}
-
-.btn-github:hover {
-    background-color: #218838; /* Darker green for hover */
-}
-
-.btn-email {
-    background-color: #E4AA42;
-}
-
-.btn-email:hover {
-    background-color: #CF9726;
-}
-
-.btn-linkedin {
-    background-color: #0077B5; /* LinkedIn blue color */
-}
-
-.btn-linkedin:hover {
-    background-color: #005983; /* Darker LinkedIn blue */
-}
-
 /* Experience Section */
 #experiences {
     padding: 60px 20px;
-    background-color: #f1f1f1;
+    background-color: #222; /* Dark background for the experiences section */
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     margin-bottom: 40px;
 }
 
@@ -249,22 +187,22 @@ h2 {
 
 #experiences .experience-item h3 {
     font-size: 1.8rem;
-    color: #2c3e50;
+    color: #ecf0f1;
     margin-bottom: 5px;
 }
 
 #experiences .experience-item p {
     font-size: 1.1rem;
-    color: #34495e;
+    color: #bdc3c7;
     margin-bottom: 10px;
 }
 
 /* Publications Section */
 #publications {
     padding: 60px 20px;
-    background-color: #ffffff;
+    background-color: #222; /* Dark background for the publications section */
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     margin-bottom: 40px;
 }
 
@@ -281,12 +219,12 @@ h2 {
 
 #publications ul li svg {
     margin-right: 10px;
-    color: #2980b9;
+    color: #1abc9c;
 }
 
 #publications ul li span {
     font-size: 1.1rem;
-    color: #2c3e50;
+    color: #ecf0f1;
 }
 
 #publications ul li .publication-status {
@@ -325,7 +263,7 @@ h2 {
 /* Project Card Styles */
 .project-card {
     display: flex;
-    background-color: #222;
+    background-color: #333;
     border-radius: 15px;
     margin-bottom: 20px;
     padding: 20px;
@@ -351,14 +289,14 @@ h2 {
 
 .project-category {
     font-size: 14px;
-    color: #bbb;
+    color: #bdc3c7;
     margin-bottom: 5px;
 }
 
 .project-title {
     font-size: 24px;
     font-weight: bold;
-    color: #fff;
+    color: #ecf0f1;
     margin-bottom: 10px;
 }
 
