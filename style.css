@@ -3,22 +3,15 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    color: #fff; /* Updated to white */
-    background-color: #111; /* Updated to dark background */
+    color: #333;
+    background-color: #f8f9fa;
 }
 
 h2 {
     font-size: 2.5rem;
-    color: #2c3e50; /* You may want to update this color for consistency */
+    color: #2c3e50;
     text-align: center;
     margin-bottom: 1rem;
-}
-
-h3 {
-    text-align: center;
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 40px;
 }
 
 .container {
@@ -72,8 +65,6 @@ h3 {
     border-bottom: 3px solid #1abc9c;
 }
 
-/* About and Contact Section */
-
 /* Hero Section */
 .hero {
     display: flex;
@@ -114,11 +105,10 @@ h3 {
     color: #34495e;
 }
 
-
-
+/* About and Contact Section */
 #about-contact {
     padding: 60px 20px;
-    background-color: #222; /* Updated to dark background */
+    background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -133,7 +123,7 @@ h3 {
 
 .intro-text {
     font-size: 1.5rem;
-    color: #bbb; /* Updated to a lighter color for readability */
+    color: #2c3e50;
     margin-bottom: 10px;
 }
 
@@ -153,7 +143,7 @@ h3 {
     margin-top: 20px;
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #ddd; /* Updated to a lighter color */
+    color: #34495e;
 }
 
 .contact-info {
@@ -253,70 +243,26 @@ h3 {
     margin-bottom: 40px;
 }
 
-.experience-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.experience-card {
-    background-color: #222;
-    border-radius: 15px;
-    display: flex;
+#experiences .experience-item {
     margin-bottom: 20px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    align-items: center;
 }
 
-.experience-image {
-    flex: 0 0 100px;
-    margin-right: 20px;
-}
-
-.experience-image img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    border-radius: 10px;
-}
-
-.experience-details {
-    flex-grow: 1;
-}
-
-.experience-location {
-    font-size: 14px;
-    color: #bbb;
+#experiences .experience-item h3 {
+    font-size: 1.8rem;
+    color: #2c3e50;
     margin-bottom: 5px;
 }
 
-.experience-title {
-    font-size: 24px;
-    font-weight: bold;
+#experiences .experience-item p {
+    font-size: 1.1rem;
+    color: #34495e;
     margin-bottom: 10px;
-}
-
-.experience-description {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 10px;
-    color: #ddd; /* Updated to a lighter color */
-}
-
-.experience-duration {
-    display: inline-block;
-    background-color: #444;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
 }
 
 /* Publications Section */
 #publications {
     padding: 60px 20px;
-    background-color: #222; /* Updated to dark background */
+    background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
@@ -340,7 +286,7 @@ h3 {
 
 #publications ul li span {
     font-size: 1.1rem;
-    color: #ddd; /* Updated to a lighter color */
+    color: #2c3e50;
 }
 
 #publications ul li .publication-status {
@@ -374,6 +320,64 @@ h3 {
 .project-item {
     margin-bottom: 20px;
     display: block; /* Ensure all projects are displayed by default */
+}
+
+/* Project Card Styles */
+.project-card {
+    display: flex;
+    background-color: #222;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    align-items: center;
+}
+
+.project-image-container {
+    flex: 0 0 100px;
+    margin-right: 20px;
+}
+
+.project-image-container img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.project-details {
+    flex-grow: 1;
+}
+
+.project-category {
+    font-size: 14px;
+    color: #bbb;
+    margin-bottom: 5px;
+}
+
+.project-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    color: #1abc9c;
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: #16a085;
+}
+
+.project-link svg {
+    margin-left: 5px;
 }
 
 /* Responsive Design */
