@@ -297,7 +297,7 @@ h2 {
 }
 
 #publications ul li svg {
-    margin-right: 15px; /* Increased margin-right for the SVG */
+    margin-right: 25px; /* Increased margin-right for the SVG */
     margin-top: 3px; /* Add a small top margin for better alignment */
     color: #1abc9c;
 }
