@@ -73,7 +73,7 @@
                     </div>
                 </div>
                 <div class="about-description">
-                    <p>I am Sepehr Rezaee, a passionate and driven Computer Science student at The National University of Iran, specializing in Deep Learning, Machine Learning, and AI Safety. With a solid foundation in mathematics and computer science, I have developed expertise in building robust and interpretable machine learning models, particularly for applications in scientific computing and AI safety. My academic and professional journey is marked by significant contributions to research, hands-on experience in various roles, and a strong commitment to advancing knowledge in AI and its applications.</p>
+                    <p>A passionate and driven Computer Science student at The National University of Iran, specializing in Deep Learning, Machine Learning, and AI Safety. With a solid foundation in mathematics and computer science, I have developed expertise in building robust and interpretable machine learning models, particularly for applications in scientific computing and AI safety. My academic and professional journey is marked by significant contributions to research, hands-on experience in various roles, and a strong commitment to advancing knowledge in AI and its applications.</p>
                 </div>
             </div>
     
@@ -267,11 +267,20 @@
     <section id="projects" class="projects">
         <div class="container">
             <h2>Projects</h2>
-
-            <!-- Artificial Intelligence Projects -->
-            <h3>Artificial Intelligence Projects</h3>
+    
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="Artificial Intelligence">Artificial Intelligence</button>
+                <button class="filter-btn" data-filter="Neural Networks">Neural Networks</button>
+                <button class="filter-btn" data-filter="Image Processing">Image Processing</button>
+                <button class="filter-btn" data-filter="Computational Neuroscience">Computational Neuroscience</button>
+            </div>
+    
+            <!-- Projects List -->
             <div class="projects-list">
-                <div class="project-item">
+                <!-- Artificial Intelligence Projects -->
+                <div class="project-item" data-category="Artificial Intelligence">
                     <div class="project-image">
                         <img alt="Physics-Informed Neural Networks" src="/images/ai_project_01.png">
                     </div>
@@ -282,7 +291,7 @@
                         <p class="project-description">Developed a PINN model to predict disease progression using differential equations, contributing to advancements in AI-driven healthcare.</p>
                     </div>
                 </div>
-                <div class="project-item">
+                <div class="project-item" data-category="Artificial Intelligence">
                     <div class="project-image">
                         <img alt="M/EEG Data Analysis" src="/images/ai_project_02.png">
                     </div>
@@ -293,7 +302,7 @@
                         <p class="project-description">Applied deep learning techniques to analyze M/EEG data, advancing research in computational neuroscience.</p>
                     </div>
                 </div>
-                <div class="project-item">
+                <div class="project-item" data-category="Artificial Intelligence">
                     <div class="project-image">
                         <img alt="AI Model Security" src="/images/ai_project_03.png">
                     </div>
@@ -304,12 +313,9 @@
                         <p class="project-description">Contributed to research on backdooring and scanning trojaned models, resulting in multiple publications and submissions to NeurIPS 2024.</p>
                     </div>
                 </div>
-            </div>
-
-            <!-- Neural Network Projects -->
-            <h3>Neural Network Projects</h3>
-            <div class="projects-list">
-                <div class="project-item">
+    
+                <!-- Neural Networks Projects -->
+                <div class="project-item" data-category="Neural Networks">
                     <div class="project-image">
                         <img alt="Fashion MNIST Classification" src="/images/nn_project_01.png">
                     </div>
@@ -322,7 +328,7 @@
                         <p class="project-description">Implemented a PyTorch-based model for classifying Fashion MNIST dataset using multi-layer perceptrons, focusing on dropout, batch normalization, and regularization.</p>
                     </div>
                 </div>
-                <div class="project-item">
+                <div class="project-item" data-category="Neural Networks">
                     <div class="project-image">
                         <img alt="CIFAR-10 Classification" src="/images/nn_project_02.png">
                     </div>
@@ -335,7 +341,7 @@
                         <p class="project-description">Developed a CNN for CIFAR-10 image classification, optimizing architecture with pooling layers and batch normalization for maximum accuracy.</p>
                     </div>
                 </div>
-                <div class="project-item">
+                <div class="project-item" data-category="Neural Networks">
                     <div class="project-image">
                         <img alt="EfficientNet, ResNext, and Inception-ResNet" src="/images/nn_project_03.png">
                     </div>
@@ -348,7 +354,7 @@
                         <p class="project-description">Explored the EfficientNet, ResNext, and Inception-ResNet architectures for image classification on the Intel Image Classification dataset, incorporating transfer learning techniques.</p>
                     </div>
                 </div>
-                <div class="project-item">
+                <div class="project-item" data-category="Neural Networks">
                     <div class="project-image">
                         <img alt="Variational Autoencoders" src="/images/nn_project_04.png">
                     </div>
@@ -361,7 +367,7 @@
                         <p class="project-description">Conducted a study on Variational Autoencoders (VAE) and implemented a network capable of generating CIFAR-10 images using novel architectures.</p>
                     </div>
                 </div>
-                <div class="project-item">
+                <div class="project-item" data-category="Neural Networks">
                     <div class="project-image">
                         <img alt="Persian Language Model" src="/images/nn_project_05.png">
                     </div>
@@ -374,12 +380,9 @@
                         <p class="project-description">Created a Persian language model using RNNs/LSTM cells, trained on the Persian Wikipedia dataset for sequence prediction, achieving optimized perplexity scores.</p>
                     </div>
                 </div>
-            </div>
-
-            <!-- Computational Neuroscience Projects -->
-            <h3>Computational Neuroscience Projects</h3>
-            <div class="projects-list">
-                <div class="project-item">
+    
+                <!-- Computational Neuroscience Projects -->
+                <div class="project-item" data-category="Computational Neuroscience">
                     <div class="project-image">
                         <img alt="Neuron Model Simulation" src="/images/cn_project_01.png">
                     </div>
@@ -392,7 +395,7 @@
                         <p class="project-description">Implemented a neuron model to simulate the effects of a neurological disease and a drug treatment using PyTorch. This project also involved analyzing the role of the myelin sheath and the function of auditory hair cells.</p>
                     </div>
                 </div>
-                <div class="project-item">
+                <div class="project-item" data-category="Computational Neuroscience">
                     <div class="project-image">
                         <img alt="Neuron Behavior Replication" src="/images/cn_project_02.png">
                     </div>
@@ -405,7 +408,7 @@
                         <p class="project-description">Developed and evaluated neuron models that replicate real neuron behavior in response to various input currents, including predicting neuron spikes and analyzing different connectivity patterns between neurons using PyTorch and SynapticFlow.</p>
                     </div>
                 </div>
-                <div class="project-item">
+                <div class="project-item" data-category="Computational Neuroscience">
                     <div class="project-image">
                         <img alt="Population Behavior Simulation" src="/images/cn_project_03.png">
                     </div>
@@ -418,7 +421,7 @@
                         <p class="project-description">Simulated the behavior of neuron populations with different connectivity patterns under various input stimuli, creating raster plots, analyzing the interaction between inhibitory and excitatory populations, and designing encoding schemes for neural signals.</p>
                     </div>
                 </div>
-                <div class="project-item">
+                <div class="project-item" data-category="Computational Neuroscience">
                     <div class="project-image">
                         <img alt="Spiking Neural Network" src="/images/cn_project_04.png">
                     </div>
@@ -431,12 +434,9 @@
                         <p class="project-description">Designed and trained a spiking neural network for digit recognition using reward-modulated spike-timing-dependent plasticity (STDP). The network was trained to recognize binary digits and output their decimal equivalents.</p>
                     </div>
                 </div>
-            </div>
-
-            <!-- Image Processing Projects -->
-            <h3>Image Processing Projects</h3>
-            <div class="projects-list">
-                <div class="project-item">
+    
+                <!-- Image Processing Projects -->
+                <div class="project-item" data-category="Image Processing">
                     <div class="project-image">
                         <img alt="Facial Feature Manipulation" src="/images/ip_project_01.png">
                     </div>
@@ -449,7 +449,7 @@
                         <p class="project-description">Developed a program using Python libraries (e.g., OpenCV, skimage) to apply linear and nonlinear transformations to detect and manipulate facial features in images, such as creating caricatures.</p>
                     </div>
                 </div>
-                <div class="project-item">
+                <div class="project-item" data-category="Image Processing">
                     <div class="project-image">
                         <img alt="Image Index Compression" src="/images/ip_project_02.png">
                     </div>
@@ -462,7 +462,7 @@
                         <p class="project-description">Implemented a function for image index compression using K-means clustering to reduce color space, with performance comparison across different color spaces.</p>
                     </div>
                 </div>
-                <div class="project-item">
+                <div class="project-item" data-category="Image Processing">
                     <div class="project-image">
                         <img alt="Edge Detection and Morphological Operations" src="/images/ip_project_03.png">
                     </div>
@@ -475,7 +475,7 @@
                         <p class="project-description">Designed and implemented algorithms for edge detection and morphological operations in fingerprint image classification, working with different classes of fingerprint patterns.</p>
                     </div>
                 </div>
-                <div class="project-item">
+                <div class="project-item" data-category="Image Processing">
                     <div class="project-image">
                         <img alt="Texture Synthesis and Hole Filling" src="/images/ip_project_04.png">
                     </div>
@@ -488,7 +488,7 @@
                         <p class="project-description">Built a system for texture synthesis and hole filling in images, focusing on synthesizing textures and filling missing image data using advanced techniques.</p>
                     </div>
                 </div>
-                <div class="project-item">
+                <div class="project-item" data-category="Image Processing">
                     <div class="project-image">
                         <img alt="JPEG Compression Techniques" src="/images/ip_project_05.png">
                     </div>
@@ -504,6 +504,7 @@
             </div>
         </div>
     </section>
+    
 
 
     <!-- Footer -->
@@ -515,11 +516,19 @@
 
     <!-- jQuery for Project Filter -->
     <script>
-        $(document).ready(function(){
-            $('.filter-btn').click(function(){
-                var category = $(this).attr('data-category');
-                $('.project').hide();
-                $('.' + category).show();
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectItems = document.querySelectorAll('.project-item');
+    
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.getAttribute('data-filter');
+                projectItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
             });
         });
     </script>
