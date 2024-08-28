@@ -119,7 +119,7 @@ h2 {
 /* About and Contact Section */
 #about-contact {
     padding: 60px 20px;
-    background-color: #747474; /* Dark background for the about/contact section */
+    background-color: #000000; /* Dark background for the about/contact section */
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(255, 251, 251, 0.2);
     display: flex;
@@ -162,7 +162,7 @@ h2 {
     margin-top: 20px;
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #000000;
+    color: #ffffff;
 }
 
 .contact-info {
