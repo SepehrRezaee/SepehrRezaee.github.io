@@ -257,7 +257,11 @@ h2 {
 }
 
 #experiences .experience-item {
+    background-color: #333; /* Gray background for each experience item */
+    border-radius: 8px;
+    padding: 20px;
     margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for each item */
 }
 
 #experiences .experience-item h3 {
@@ -271,6 +275,7 @@ h2 {
     color: #bdc3c7;
     margin-bottom: 10px;
 }
+
 
 /* Publications Section */
 #publications {
