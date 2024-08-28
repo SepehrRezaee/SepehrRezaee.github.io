@@ -54,6 +54,25 @@ h2 {
     color: #e74c3c;
 }
 
+.shiny-name {
+    font-weight: bold;
+    font-style: italic;
+    background: linear-gradient(90deg, #f3ec78, #af4261, #f3ec78);
+    background-size: 200% 200%;
+    animation: shiny 2s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes shiny {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
 .about-description {
     margin-top: 20px;
     font-size: 1.1rem;
@@ -108,45 +127,45 @@ h2 {
     background-color: #1c6693;
 }
 
-/* Updated Button Colors */
+/* Adjusted Brightness for Buttons */
 .btn-cv {
-    background-color: #e57373;
+    background-color: rgba(255, 87, 34, 0.8);
 }
 
 .btn-cv:hover {
-    background-color: #e53935;
+    background-color: rgba(255, 87, 34, 1);
 }
 
 .btn-scholar {
-    background-color: #ba68c8;
+    background-color: rgba(123, 31, 162, 0.8);
 }
 
 .btn-scholar:hover {
-    background-color: #8e44ad;
+    background-color: rgba(123, 31, 162, 1);
 }
 
 .btn-github {
-    background-color: #4caf50;
+    background-color: rgba(34, 150, 243, 0.8);
 }
 
 .btn-github:hover {
-    background-color: #388e3c;
+    background-color: rgba(34, 150, 243, 1);
 }
 
 .btn-email {
-    background-color: #ffb74d;
+    background-color: rgba(255, 193, 7, 0.8);
 }
 
 .btn-email:hover {
-    background-color: #f57c00;
+    background-color: rgba(255, 193, 7, 1);
 }
 
 .btn-linkedin {
-    background-color: #42a5f5;
+    background-color: rgba(0, 119, 181, 0.8);
 }
 
 .btn-linkedin:hover {
-    background-color: #1976d2;
+    background-color: rgba(0, 119, 181, 1);
 }
 
 /* Responsive Design */
