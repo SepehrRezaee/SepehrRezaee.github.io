@@ -436,7 +436,12 @@ h2 {
     align-items: center;
     margin-bottom: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 80%; /* Adjust this value to decrease the width */
+    max-width: 800px; /* This sets a maximum width, you can adjust it as needed */
+    margin-left: auto;
+    margin-right: auto; /* Center the card if the width is less than 100% */
 }
+
 
 .experience-card:hover {
     transform: translateY(-5px);
@@ -453,7 +458,10 @@ h2 {
     height: 100px;
     object-fit: contain;
     border-radius: 10px;
+    background-color: #ffffff; /* Add white background */
+    padding: 5px; /* Optional: Add padding to give some space between the image and the background */
 }
+
 
 .experience-details {
     flex-grow: 1;
