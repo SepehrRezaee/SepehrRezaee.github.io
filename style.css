@@ -1,130 +1,158 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-}
-
-h2, h3 {
     color: #333;
-    margin-bottom: 20px;
+    background-color: #f8f9fa;
 }
 
 h2 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #2c3e50;
     text-align: center;
+    margin-bottom: 1rem;
 }
 
-h3 {
-    font-size: 2em;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 10px;
-    margin-top: 40px;
-}
-
-/* Container */
 .container {
-    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 0;
-}
-
-/* Projects Section */
-.projects {
-    padding: 50px 0;
-}
-
-/* Project List */
-.projects-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-/* Project Item */
-.project-item {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: calc(33.333% - 20px);
-    min-width: 300px;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Project Image */
-.project-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-bottom: 2px solid #eee;
-}
-
-/* Project Details */
-.project-details {
     padding: 20px;
 }
 
-.project-category {
-    font-size: 0.9em;
-    color: #888;
+/* About and Contact Section */
+#about-contact {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.intro {
+    flex: 1 1 40%;
+    margin-right: 2%;
+}
+
+.intro-text {
+    font-size: 1.5rem;
+    color: #2c3e50;
     margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
-.project-title {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.project-duration {
-    font-size: 0.9em;
-    color: #666;
-    margin-bottom: 10px;
-}
-
-.project-description {
-    font-size: 1em;
-    color: #555;
-    line-height: 1.4;
-    margin-bottom: 15px;
-}
-
-/* Project Link */
-.project-link {
-    display: inline-block;
-    color: #3498db;
-    text-decoration: none;
+.name {
+    font-size: 3rem;
     font-weight: bold;
-    transition: color 0.3s ease;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.project-link:hover {
-    color: #2980b9;
+.name-letter {
+    margin: 0 2px;
+    color: #e74c3c;
+}
+
+.about-description {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #34495e;
+}
+
+.contact-info {
+    flex: 1 1 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-container {
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #2c3e50;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    background-color: #2980b9;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn svg {
+    margin-right: 10px;
+}
+
+.btn:hover {
+    background-color: #1c6693;
+}
+
+.btn-cv {
+    background-color: rgba(208, 90, 69, 0.5);
+}
+
+.btn-cv:hover {
+    background-color: rgba(208, 90, 69, 0.7);
+}
+
+.btn-scholar {
+    background-color: rgba(135, 70, 220, 0.5);
+}
+
+.btn-scholar:hover {
+    background-color: rgba(135, 70, 220, 0.7);
+}
+
+.btn-github {
+    background-color: rgba(74, 156, 128, 0.5);
+}
+
+.btn-github:hover {
+    background-color: rgba(74, 156, 128, 0.7);
+}
+
+.btn-email {
+    background-color: rgba(228, 170, 66, 0.5);
+}
+
+.btn-email:hover {
+    background-color: rgba(228, 170, 66, 0.7);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .projects-list {
-        flex-direction: column;
+    .intro, .contact-info {
+        flex: 1 1 100%;
+        text-align: center;
+        margin-right: 0;
     }
 
-    .project-item {
-        width: 100%;
-        margin-bottom: 20px;
+    .name {
+        justify-content: center;
+    }
+
+    .button-container {
+        justify-content: center;
     }
 }
