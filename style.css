@@ -294,7 +294,7 @@ h2 {
     border: 2px solid #ffffff00; /* White border around the element */
     border-radius: 10px; /* Optional: Rounds the corners */
     padding: 10px; /* Optional: Adds padding inside the border */
-    backdrop-filter: blur(10px); /* Applies a blur effect to the background */
+    backdrop-filter: blur(4px); /* Applies a blur effect to the background */
     background-color: rgba(255, 255, 255, 0.1); /* Slightly translucent background to work with blur */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow for depth */
 }
