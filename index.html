@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sepehr Rezaee - Personal Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
@@ -42,35 +42,244 @@
     <section id="projects" class="projects">
         <div class="container">
             <h2>Projects</h2>
-            <div class="project-categories">
-                <button class="filter-btn" data-category="ai">Artificial Intelligence</button>
-                <button class="filter-btn" data-category="neuro">Computational Neuroscience</button>
-                <button class="filter-btn" data-category="image">Image Processing</button>
+
+            <!-- Artificial Intelligence Projects -->
+            <h3>Artificial Intelligence Projects</h3>
+            <div class="projects-list">
+                <div class="project-item">
+                    <div class="project-image">
+                        <img alt="Physics-Informed Neural Networks" src="/images/ai_project_01.png">
+                    </div>
+                    <div class="project-details">
+                        <p class="project-category">Artificial Intelligence</p>
+                        <h2 class="project-title">Physics-Informed Neural Networks for Disease Progression Modeling</h2>
+                        <p class="project-duration">(2021–Present)</p>
+                        <p class="project-description">Developed a PINN model to predict disease progression using differential equations, contributing to advancements in AI-driven healthcare.</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-image">
+                        <img alt="M/EEG Data Analysis" src="/images/ai_project_02.png">
+                    </div>
+                    <div class="project-details">
+                        <p class="project-category">Artificial Intelligence</p>
+                        <h2 class="project-title">Machine Learning for M/EEG Data Analysis</h2>
+                        <p class="project-duration">(2023–2024)</p>
+                        <p class="project-description">Applied deep learning techniques to analyze M/EEG data, advancing research in computational neuroscience.</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-image">
+                        <img alt="AI Model Security" src="/images/ai_project_03.png">
+                    </div>
+                    <div class="project-details">
+                        <p class="project-category">Artificial Intelligence</p>
+                        <h2 class="project-title">AI Model Security</h2>
+                        <p class="project-duration">(2024)</p>
+                        <p class="project-description">Contributed to research on backdooring and scanning trojaned models, resulting in multiple publications and submissions to NeurIPS 2024.</p>
+                    </div>
+                </div>
             </div>
-            <div class="project-list">
-                <!-- AI Projects -->
-                <div class="project ai">
-                    <h3>Physics-Informed Neural Networks</h3>
-                    <p>Developed a PINN model to predict disease progression...</p>
-                </div>
-                <!-- More AI Projects... -->
 
-                <!-- Computational Neuroscience Projects -->
-                <div class="project neuro">
-                    <h3>Neurological Disease Simulation</h3>
-                    <p>Implemented a neuron model to simulate the effects of a neurological disease...</p>
+            <!-- Neural Network Projects -->
+            <h3>Neural Network Projects</h3>
+            <div class="projects-list">
+                <div class="project-item">
+                    <div class="project-image">
+                        <img alt="Fashion MNIST Classification" src="/images/nn_project_01.png">
+                    </div>
+                    <div class="project-details">
+                        <p class="project-category">Neural Networks</p>
+                        <h2 class="project-title">Fashion MNIST Classification</h2>
+                        <a target="_blank" rel="noopener" class="project-link" href="Assignment No1.pdf">
+                            Assignment 1
+                        </a>
+                        <p class="project-description">Implemented a PyTorch-based model for classifying Fashion MNIST dataset using multi-layer perceptrons, focusing on dropout, batch normalization, and regularization.</p>
+                    </div>
                 </div>
-                <!-- More Neuroscience Projects... -->
+                <div class="project-item">
+                    <div class="project-image">
+                        <img alt="CIFAR-10 Classification" src="/images/nn_project_02.png">
+                    </div>
+                    <div class="project-details">
+                        <p class="project-category">Neural Networks</p>
+                        <h2 class="project-title">CNN for CIFAR-10 Classification</h2>
+                        <a target="_blank" rel="noopener" class="project-link" href="Assignment No2.pdf">
+                            Assignment 2
+                        </a>
+                        <p class="project-description">Developed a CNN for CIFAR-10 image classification, optimizing architecture with pooling layers and batch normalization for maximum accuracy.</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-image">
+                        <img alt="EfficientNet, ResNext, and Inception-ResNet" src="/images/nn_project_03.png">
+                    </div>
+                    <div class="project-details">
+                        <p class="project-category">Neural Networks</p>
+                        <h2 class="project-title">Exploring EfficientNet, ResNext, and Inception-ResNet</h2>
+                        <a target="_blank" rel="noopener" class="project-link" href="Assignment No3.pdf">
+                            Assignment 3
+                        </a>
+                        <p class="project-description">Explored the EfficientNet, ResNext, and Inception-ResNet architectures for image classification on the Intel Image Classification dataset, incorporating transfer learning techniques.</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-image">
+                        <img alt="Variational Autoencoders" src="/images/nn_project_04.png">
+                    </div>
+                    <div class="project-details">
+                        <p class="project-category">Neural Networks</p>
+                        <h2 class="project-title">Variational Autoencoders for Image Generation</h2>
+                        <a target="_blank" rel="noopener" class="project-link" href="Assignment No4.pdf">
+                            Assignment 4
+                        </a>
+                        <p class="project-description">Conducted a study on Variational Autoencoders (VAE) and implemented a network capable of generating CIFAR-10 images using novel architectures.</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-image">
+                        <img alt="Persian Language Model" src="/images/nn_project_05.png">
+                    </div>
+                    <div class="project-details">
+                        <p class="project-category">Neural Networks</p>
+                        <h2 class="project-title">Persian Language Model using RNNs/LSTM</h2>
+                        <a target="_blank" rel="noopener" class="project-link" href="Assignment No5.pdf">
+                            Assignment 5
+                        </a>
+                        <p class="project-description">Created a Persian language model using RNNs/LSTM cells, trained on the Persian Wikipedia dataset for sequence prediction, achieving optimized perplexity scores.</p>
+                    </div>
+                </div>
+            </div>
 
-                <!-- Image Processing Projects -->
-                <div class="project image">
-                    <h3>Facial Feature Detection</h3>
-                    <p>Developed a program using Python libraries to apply transformations to facial features...</p>
+            <!-- Computational Neuroscience Projects -->
+            <h3>Computational Neuroscience Projects</h3>
+            <div class="projects-list">
+                <div class="project-item">
+                    <div class="project-image">
+                        <img alt="Neuron Model Simulation" src="/images/cn_project_01.png">
+                    </div>
+                    <div class="project-details">
+                        <p class="project-category">Computational Neuroscience</p>
+                        <h2 class="project-title">Neuron Model Simulation</h2>
+                        <a target="_blank" rel="noopener" class="project-link" href="Assignment No1.pdf">
+                            Assignment 1
+                        </a>
+                        <p class="project-description">Implemented a neuron model to simulate the effects of a neurological disease and a drug treatment using PyTorch. This project also involved analyzing the role of the myelin sheath and the function of auditory hair cells.</p>
+                    </div>
                 </div>
-                <!-- More Image Processing Projects... -->
+                <div class="project-item">
+                    <div class="project-image">
+                        <img alt="Neuron Behavior Replication" src="/images/cn_project_02.png">
+                    </div>
+                    <div class="project-details">
+                        <p class="project-category">Computational Neuroscience</p>
+                        <h2 class="project-title">Neuron Behavior Replication</h2>
+                        <a target="_blank" rel="noopener" class="project-link" href="Assignment No2.pdf">
+                            Assignment 2
+                        </a>
+                        <p class="project-description">Developed and evaluated neuron models that replicate real neuron behavior in response to various input currents, including predicting neuron spikes and analyzing different connectivity patterns between neurons using PyTorch and SynapticFlow.</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-image">
+                        <img alt="Population Behavior Simulation" src="/images/cn_project_03.png">
+                    </div>
+                    <div class="project-details">
+                        <p class="project-category">Computational Neuroscience</p>
+                        <h2 class="project-title">Population Behavior Simulation</h2>
+                        <a target="_blank" rel="noopener" class="project-link" href="Assignment No3.pdf">
+                            Assignment 3
+                        </a>
+                        <p class="project-description">Simulated the behavior of neuron populations with different connectivity patterns under various input stimuli, creating raster plots, analyzing the interaction between inhibitory and excitatory populations, and designing encoding schemes for neural signals.</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-image">
+                        <img alt="Spiking Neural Network" src="/images/cn_project_04.png">
+                    </div>
+                    <div class="project-details">
+                        <p class="project-category">Computational Neuroscience</p>
+                        <h2 class="project-title">Spiking Neural Network for Digit Recognition</h2>
+                        <a target="_blank" rel="noopener" class="project-link" href="Assignment No4.pdf">
+                            Assignment 4
+                        </a>
+                        <p class="project-description">Designed and trained a spiking neural network for digit recognition using reward-modulated spike-timing-dependent plasticity (STDP). The network was trained to recognize binary digits and output their decimal equivalents.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image Processing Projects -->
+            <h3>Image Processing Projects</h3>
+            <div class="projects-list">
+                <div class="project-item">
+                    <div class="project-image">
+                        <img alt="Facial Feature Manipulation" src="/images/ip_project_01.png">
+                    </div>
+                    <div class="project-details">
+                        <p class="project-category">Image Processing</p>
+                        <h2 class="project-title">Facial Feature Manipulation</h2>
+                        <a target="_blank" rel="noopener" class="project-link" href="Assignment No1.pdf">
+                            Assignment 1
+                        </a>
+                        <p class="project-description">Developed a program using Python libraries (e.g., OpenCV, skimage) to apply linear and nonlinear transformations to detect and manipulate facial features in images, such as creating caricatures.</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-image">
+                        <img alt="Image Index Compression" src="/images/ip_project_02.png">
+                    </div>
+                    <div class="project-details">
+                        <p class="project-category">Image Processing</p>
+                        <h2 class="project-title">Image Index Compression using K-means</h2>
+                        <a target="_blank" rel="noopener" class="project-link" href="Assignment No2.pdf">
+                            Assignment 2
+                        </a>
+                        <p class="project-description">Implemented a function for image index compression using K-means clustering to reduce color space, with performance comparison across different color spaces.</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-image">
+                        <img alt="Edge Detection and Morphological Operations" src="/images/ip_project_03.png">
+                    </div>
+                    <div class="project-details">
+                        <p class="project-category">Image Processing</p>
+                        <h2 class="project-title">Edge Detection and Morphological Operations</h2>
+                        <a target="_blank" rel="noopener" class="project-link" href="3rd Assignment.pdf">
+                            Assignment 3
+                        </a>
+                        <p class="project-description">Designed and implemented algorithms for edge detection and morphological operations in fingerprint image classification, working with different classes of fingerprint patterns.</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-image">
+                        <img alt="Texture Synthesis and Hole Filling" src="/images/ip_project_04.png">
+                    </div>
+                    <div class="project-details">
+                        <p class="project-category">Image Processing</p>
+                        <h2 class="project-title">Texture Synthesis and Hole Filling</h2>
+                        <a target="_blank" rel="noopener" class="project-link" href="4th Assignment.pdf">
+                            Assignment 4
+                        </a>
+                        <p class="project-description">Built a system for texture synthesis and hole filling in images, focusing on synthesizing textures and filling missing image data using advanced techniques.</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-image">
+                        <img alt="JPEG Compression Techniques" src="/images/ip_project_05.png">
+                    </div>
+                    <div class="project-details">
+                        <p class="project-category">Image Processing</p>
+                        <h2 class="project-title">JPEG Compression Techniques</h2>
+                        <a target="_blank" rel="noopener" class="project-link" href="5th Assignment.pdf">
+                            Assignment 5
+                        </a>
+                        <p class="project-description">Worked on JPEG compression techniques, including parameter tuning for compression levels and comparing the impact on image quality before and after compression.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
 
     <!-- Publications Section -->
     <section id="publications" class="publications">
