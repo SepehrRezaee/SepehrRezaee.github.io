@@ -298,19 +298,22 @@ h2 {
 }
 
 #publications ul li svg {
-    margin-right: 10px;
+    margin-right: 15px; /* Increased margin-right for the SVG */
+    margin-top: 3px; /* Add a small top margin for better alignment */
     color: #1abc9c;
 }
 
 #publications ul li span {
     font-size: 1.1rem;
     color: #ecf0f1;
+    margin-left: 5px; /* Added a small margin-left for spacing */
 }
 
 #publications ul li .publication-status {
     font-weight: bold;
     box-shadow: rgba(50, 205, 50, 0.6) 0px 0px 10px 2px;
 }
+
 
 /* Project Filter Buttons */
 .filter-buttons {
@@ -335,6 +338,13 @@ h2 {
     background-color: #1abc9c;
 }
 
+/* Projects List Container */
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns for the grid */
+    gap: 20px; /* Space between the grid items */
+}
+
 .project-item {
     margin-bottom: 20px;
     display: block; /* Ensure all projects are displayed by default */
@@ -345,13 +355,13 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f8f9fa;
+    background-color: #ffffff; /* White background for the project card */
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin-bottom: 30px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #000000; /* Black text color */
 }
 
 .project-card:hover {
@@ -381,14 +391,14 @@ h2 {
 .project-title {
     font-size: 20px;
     font-weight: bold;
-    color: #2c3e50;
+    color: #000000; /* Black color for project title */
     margin-bottom: 10px;
 }
 
 .project-link {
     display: inline-flex;
     align-items: center;
-    color: #333;
+    color: #333333; /* Dark gray for links */
     font-size: 1.2rem;
     text-decoration: none;
     margin-top: 15px;
@@ -402,6 +412,20 @@ h2 {
 .project-link svg {
     margin-left: 8px;
 }
+
+/* Responsive Design for Projects Section */
+@media (max-width: 1024px) {
+    .projects-list {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-list {
+        grid-template-columns: 1fr; /* One column for small screens */
+    }
+}
+
 
 /* Updated Experience Card Styles */
 .experience-card {
