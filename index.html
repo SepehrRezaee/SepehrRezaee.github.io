@@ -10,17 +10,43 @@
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">Sepehr Rezaee</div>
-            <ul class="nav-links">
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <div class="chakra-stack navbar">
+        <div class="chakra-tabs">
+            <div role="tablist" aria-orientation="horizontal" class="chakra-tabs__tablist">
+                <a href="#about">
+                    <button type="button" id="tab-0" role="tab" tabindex="-1" aria-selected="false" aria-controls="tabpanel-0" class="chakra-tabs__tab" data-index="0">About</button>
+                </a>
+                <a href="#publications">
+                    <button type="button" id="tab-1" role="tab" tabindex="-1" aria-selected="false" aria-controls="tabpanel-1" class="chakra-tabs__tab" data-index="1">Publications</button>
+                </a>
+                <a href="#experiences">
+                    <button type="button" id="tab-2" role="tab" tabindex="-1" aria-selected="false" aria-controls="tabpanel-2" class="chakra-tabs__tab" data-index="2">Experiences</button>
+                </a>
+                <a href="#projects">
+                    <button type="button" id="tab-3" role="tab" tabindex="0" aria-selected="true" aria-controls="tabpanel-3" class="chakra-tabs__tab" data-index="3">Projects</button>
+                </a>
+            </div>
+            <div class="chakra-tabs__tab-indicator"></div>
         </div>
-    </nav>
+        <div class="chakra-stack theme-switcher">
+            <button type="button" class="chakra-button" aria-label="Switch to light mode">
+                <svg viewBox="0 0 24 24" focusable="false" class="chakra-icon" aria-hidden="true">
+                    <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <path d="M12 1v2"></path>
+                        <path d="M12 21v2"></path>
+                        <path d="M4.22 4.22l1.42 1.42"></path>
+                        <path d="M18.36 18.36l1.42 1.42"></path>
+                        <path d="M1 12h2"></path>
+                        <path d="M21 12h2"></path>
+                        <path d="M4.22 19.78l1.42-1.42"></path>
+                        <path d="M18.36 5.64l1.42-1.42"></path>
+                    </g>
+                </svg>
+            </button>
+        </div>
+    </div>
+    
 
     <!-- Hero Section -->
     <section class="hero">
