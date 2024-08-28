@@ -140,6 +140,85 @@ h2 {
     background-color: rgba(228, 170, 66, 0.7);
 }
 
+/* Publication Button */
+.publication-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #e74c3c;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.publication-button:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+.publication-conference,
+.publication-status {
+    margin-right: 10px;
+}
+
+.publication-status {
+    background-color: #d35400;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.9rem;
+}
+
+.publication-conference {
+    font-weight: bold;
+}
+
+/* Navigation Bar */
+.chakra-tabs__tablist {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.chakra-tabs__tab {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 1.1rem;
+    color: #2c3e50;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.chakra-tabs__tab[aria-selected="true"] {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.chakra-tabs__tab:hover {
+    background-color: #bdc3c7;
+}
+
+.chakra-tabs__tab-indicator {
+    display: none;
+}
+
+/* Dark/Light Mode Toggle */
+.css-16mfj2s {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.css-onkibi {
+    width: 24px;
+    height: 24px;
+    color: #2c3e50;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .intro, .contact-info {
@@ -154,5 +233,13 @@ h2 {
 
     .button-container {
         justify-content: center;
+    }
+
+    .chakra-tabs__tablist {
+        flex-direction: column;
+    }
+
+    .chakra-tabs__tab {
+        margin-bottom: 10px;
     }
 }
