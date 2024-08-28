@@ -3,15 +3,22 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #f8f9fa;
+    color: #fff; /* Updated to white */
+    background-color: #111; /* Updated to dark background */
 }
 
 h2 {
     font-size: 2.5rem;
-    color: #2c3e50;
+    color: #2c3e50; /* You may want to update this color for consistency */
     text-align: center;
     margin-bottom: 1rem;
+}
+
+h3 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 40px;
 }
 
 .container {
@@ -68,7 +75,7 @@ h2 {
 /* About and Contact Section */
 #about-contact {
     padding: 60px 20px;
-    background-color: #ffffff;
+    background-color: #222; /* Updated to dark background */
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -83,7 +90,7 @@ h2 {
 
 .intro-text {
     font-size: 1.5rem;
-    color: #2c3e50;
+    color: #bbb; /* Updated to a lighter color for readability */
     margin-bottom: 10px;
 }
 
@@ -103,7 +110,7 @@ h2 {
     margin-top: 20px;
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #34495e;
+    color: #ddd; /* Updated to a lighter color */
 }
 
 .contact-info {
@@ -203,26 +210,70 @@ h2 {
     margin-bottom: 40px;
 }
 
-#experiences .experience-item {
-    margin-bottom: 20px;
+.experience-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-#experiences .experience-item h3 {
-    font-size: 1.8rem;
-    color: #2c3e50;
+.experience-card {
+    background-color: #222;
+    border-radius: 15px;
+    display: flex;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    align-items: center;
+}
+
+.experience-image {
+    flex: 0 0 100px;
+    margin-right: 20px;
+}
+
+.experience-image img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.experience-details {
+    flex-grow: 1;
+}
+
+.experience-location {
+    font-size: 14px;
+    color: #bbb;
     margin-bottom: 5px;
 }
 
-#experiences .experience-item p {
-    font-size: 1.1rem;
-    color: #34495e;
+.experience-title {
+    font-size: 24px;
+    font-weight: bold;
     margin-bottom: 10px;
+}
+
+.experience-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #ddd; /* Updated to a lighter color */
+}
+
+.experience-duration {
+    display: inline-block;
+    background-color: #444;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
 }
 
 /* Publications Section */
 #publications {
     padding: 60px 20px;
-    background-color: #ffffff;
+    background-color: #222; /* Updated to dark background */
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
@@ -246,7 +297,7 @@ h2 {
 
 #publications ul li span {
     font-size: 1.1rem;
-    color: #2c3e50;
+    color: #ddd; /* Updated to a lighter color */
 }
 
 #publications ul li .publication-status {
