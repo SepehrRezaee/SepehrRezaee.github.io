@@ -140,75 +140,12 @@ h2 {
     background-color: rgba(228, 170, 66, 0.7);
 }
 
-/* Publications Section */
-ul.css-bhb3xr {
-    list-style-type: none;
-    padding: 0;
-    margin: 20px 0;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+.btn-linkedin {
+    background-color: rgba(63, 110, 231, 0.5);
 }
 
-ul.css-bhb3xr li.css-0 {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    font-size: 1rem;
-    color: #34495e;
-}
-
-ul.css-bhb3xr li.css-0 svg.chakra-icon {
-    margin-right: 10px;
-    color: #2980b9;
-}
-
-ul.css-bhb3xr li.css-0 .chakra-text.css-157wn8n {
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #2c3e50;
-}
-
-ul.css-bhb3xr li.css-0 kbd.chakra-text.css-0 {
-    background-color: #ecf0f1;
-    border-radius: 4px;
-    padding: 2px 4px;
-    font-family: 'Courier New', Courier, monospace;
-    display: flex;
-    align-items: center;
-    margin-top: 4px;
-    gap: 5px;
-}
-
-ul.css-bhb3xr li.css-0 kbd.chakra-text.css-0 span {
-    font-weight: bold;
-    font-style: italic;
-}
-
-ul.css-bhb3xr li.css-0 kbd.chakra-text.css-0 .css-1gomreu {
-    position: relative;
-    margin-left: 5px;
-}
-
-ul.css-bhb3xr li.css-0 kbd.chakra-text.css-0 .css-1gomreu .chakra-text.css-0 {
-    color: rgba(208, 90, 69, 0.6);
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-ul.css-bhb3xr li.css-0 .chakra-text.css-0[style*="background-color: rgb(208, 90, 69);"] {
-    background-color: rgb(208, 90, 69);
-    color: #fff;
-    padding: 2px 4px;
-    border-radius: 4px;
-}
-
-ul.css-bhb3xr li.css-0 .css-1gkyawg {
-    font-weight: bold;
-    box-shadow: rgba(50, 205, 50, 0.6) 0px 0px 10px 2px;
-    margin-left: 10px;
+.btn-linkedin:hover {
+    background-color: rgba(63, 110, 231, 0.7);
 }
 
 /* Responsive Design */
@@ -225,13 +162,5 @@ ul.css-bhb3xr li.css-0 .css-1gkyawg {
 
     .button-container {
         justify-content: center;
-    }
-
-    ul.css-bhb3xr {
-        padding: 15px;
-    }
-
-    ul.css-bhb3xr li.css-0 {
-        font-size: 0.9rem;
     }
 }
