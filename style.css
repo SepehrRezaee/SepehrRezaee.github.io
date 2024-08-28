@@ -74,8 +74,10 @@ h2 {
     align-items: center;
     flex-direction: column;
     padding: 60px 20px;
-    background-color: #222; /* Dark background for the hero section */
+    background-color: #f0f0f0; /* Slightly darker than white */
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow to separate from the next section */
+    margin-bottom: 20px; /* Adds space below the hero section to create separation */
 }
 
 .hero .container {
