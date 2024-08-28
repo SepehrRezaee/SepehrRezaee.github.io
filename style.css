@@ -291,7 +291,7 @@ h2 {
 }
 
 .css-bhb3xr {
-    border: 2px solid #ffffff; /* White border around the element */
+    border: 2px solid #ffffff00; /* White border around the element */
     border-radius: 10px; /* Optional: Rounds the corners */
     padding: 10px; /* Optional: Adds padding inside the border */
     backdrop-filter: blur(10px); /* Applies a blur effect to the background */
