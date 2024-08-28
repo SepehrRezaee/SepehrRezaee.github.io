@@ -108,44 +108,45 @@ h2 {
     background-color: #1c6693;
 }
 
+/* Updated Button Colors */
 .btn-cv {
-    background-color: rgba(208, 90, 69, 0.5);
+    background-color: #e57373;
 }
 
 .btn-cv:hover {
-    background-color: rgba(208, 90, 69, 0.7);
+    background-color: #e53935;
 }
 
 .btn-scholar {
-    background-color: rgba(135, 70, 220, 0.5);
+    background-color: #ba68c8;
 }
 
 .btn-scholar:hover {
-    background-color: rgba(135, 70, 220, 0.7);
+    background-color: #8e44ad;
 }
 
 .btn-github {
-    background-color: rgba(74, 156, 128, 0.5);
+    background-color: #4caf50;
 }
 
 .btn-github:hover {
-    background-color: rgba(74, 156, 128, 0.7);
+    background-color: #388e3c;
 }
 
 .btn-email {
-    background-color: rgba(228, 170, 66, 0.5);
+    background-color: #ffb74d;
 }
 
 .btn-email:hover {
-    background-color: rgba(228, 170, 66, 0.7);
+    background-color: #f57c00;
 }
 
 .btn-linkedin {
-    background-color: rgba(63, 110, 231, 0.5);
+    background-color: #42a5f5;
 }
 
 .btn-linkedin:hover {
-    background-color: rgba(63, 110, 231, 0.7);
+    background-color: #1976d2;
 }
 
 /* Responsive Design */
