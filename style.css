@@ -293,18 +293,10 @@ h2 {
 .css-bhb3xr {
     border: 0px solid #ffffff00; /* White border around the element */
     border-radius: 10px; /* Rounds the corners */
-    padding: 10px; /* Adds padding inside the border */
-    backdrop-filter: blur(4px); /* Applies a blur effect to the background */
+    padding: 20px; /* Adds padding inside the border */
+    backdrop-filter: blur(1px); /* Applies a blur effect to the background */
     background-color: rgba(255, 255, 255, 0.1); /* Slightly translucent background to work with blur */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
-}
-
-.css-bhb3xr li {
-    margin-bottom: 15px; /* Adds space between list items */
-}
-
-.css-bhb3xr li:last-child {
-    margin-bottom: 0; /* Removes the margin from the last item */
 }
 
 
