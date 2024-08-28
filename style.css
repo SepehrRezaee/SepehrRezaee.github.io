@@ -46,7 +46,7 @@ h2 {
 .navbar-tab {
     background-color: transparent;
     color: #d4af37; /* Mustard color for tab text */
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 500;
     border: none;
     cursor: pointer;
@@ -99,7 +99,7 @@ h2 {
 }
 
 .hero h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet); /* Apply rainbow colors */
     -webkit-background-clip: text;
     color: transparent;
@@ -112,16 +112,16 @@ h2 {
 }
 
 .hero p {
-    font-size: 2.2rem;
+    font-size: 1.2rem;
     color: #36393b;
 }
 
 /* About and Contact Section */
 #about-contact {
     padding: 60px 20px;
-    background-color: #222; /* Dark background for the about/contact section */
+    background-color: #747474; /* Dark background for the about/contact section */
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 8px rgba(255, 251, 251, 0.2);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
