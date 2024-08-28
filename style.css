@@ -20,6 +20,41 @@ h2 {
     padding: 20px;
 }
 
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #1c6693;
+}
+
 /* About and Contact Section */
 #about-contact {
     padding: 60px 20px;
@@ -52,25 +87,6 @@ h2 {
 .name-letter {
     margin: 0 2px;
     color: #e74c3c;
-}
-
-.shiny-name {
-    font-weight: bold;
-    font-style: italic;
-    background: linear-gradient(90deg, #f3ec78, #af4261, #f3ec78);
-    background-size: 200% 200%;
-    animation: shiny 2s linear infinite;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-@keyframes shiny {
-    0% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 100% 50%;
-    }
 }
 
 .about-description {
@@ -127,45 +143,105 @@ h2 {
     background-color: #1c6693;
 }
 
-/* Adjusted Brightness for Buttons */
+/* Button Colors */
 .btn-cv {
-    background-color: rgba(255, 87, 34, 0.8);
+    background-color: #D05A45;
 }
 
 .btn-cv:hover {
-    background-color: rgba(255, 87, 34, 1);
+    background-color: #B44C39;
 }
 
 .btn-scholar {
-    background-color: rgba(123, 31, 162, 0.8);
+    background-color: #8746DC;
 }
 
 .btn-scholar:hover {
-    background-color: rgba(123, 31, 162, 1);
+    background-color: #6F38B2;
 }
 
 .btn-github {
-    background-color: rgba(34, 150, 243, 0.8);
+    background-color: #28a745; /* Green color */
 }
 
 .btn-github:hover {
-    background-color: rgba(34, 150, 243, 1);
+    background-color: #218838; /* Darker green for hover */
 }
 
 .btn-email {
-    background-color: rgba(255, 193, 7, 0.8);
+    background-color: #E4AA42;
 }
 
 .btn-email:hover {
-    background-color: rgba(255, 193, 7, 1);
+    background-color: #CF9726;
 }
 
 .btn-linkedin {
-    background-color: rgba(0, 119, 181, 0.8);
+    background-color: #0077B5; /* LinkedIn blue color */
 }
 
 .btn-linkedin:hover {
-    background-color: rgba(0, 119, 181, 1);
+    background-color: #005983; /* Darker LinkedIn blue */
+}
+
+/* Experience Section */
+#experiences {
+    padding: 60px 20px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+#experiences .experience-item {
+    margin-bottom: 20px;
+}
+
+#experiences .experience-item h3 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+#experiences .experience-item p {
+    font-size: 1.1rem;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+/* Publications Section */
+#publications {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+#publications ul {
+    list-style: none;
+    padding: 0;
+}
+
+#publications ul li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+}
+
+#publications ul li svg {
+    margin-right: 10px;
+    color: #2980b9;
+}
+
+#publications ul li span {
+    font-size: 1.1rem;
+    color: #2c3e50;
+}
+
+#publications ul li .publication-status {
+    font-weight: bold;
+    box-shadow: rgba(50, 205, 50, 0.6) 0px 0px 10px 2px;
 }
 
 /* Responsive Design */
@@ -182,5 +258,13 @@ h2 {
 
     .button-container {
         justify-content: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
     }
 }
