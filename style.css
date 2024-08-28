@@ -290,17 +290,25 @@ h2 {
     padding: 0;
 }
 
+/* Publication Item Styles */
 .css-bhb3xr {
-    border: 0px solid #ffffff00; /* White border around the element */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* White border with slight opacity */
     border-radius: 10px; /* Rounds the corners */
     padding: 20px; /* Adds padding inside the border */
     backdrop-filter: blur(1px); /* Applies a blur effect to the background */
     background-color: rgba(255, 255, 255, 0.1); /* Slightly translucent background to work with blur */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.css-bhb3xr:hover {
+    transform: translateY(-5px); /* Slightly raise the element on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Darker shadow on hover */
+    background-color: rgba(255, 255, 255, 0.2); /* Make the background slightly more opaque on hover */
 }
 
 .css-bhb3xr li {
-    display: flex;
+    display: flex;  
     align-items: center;
     margin-bottom: 10px; /* Add space between the list items */
 }
@@ -320,12 +328,13 @@ h2 {
     margin-left: 15px; /* Optional: Add a small space on the left */
 }
 
-
-
+/* Individual Publication List Items */
 #publications ul li {
     margin-bottom: 20px;
     display: flex;
     align-items: flex-start;
+    padding: 10px; /* Add padding inside each publication item */
+    border-radius: 10px; /* Optional: Rounds the corners of each publication item */
 }
 
 #publications ul li svg {
