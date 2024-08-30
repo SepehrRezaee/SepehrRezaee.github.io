@@ -1,23 +1,92 @@
 /* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    font-family: 'Arial', sans-serif;
     color: #ecf0f1;
     background-color: #111;
+    box-sizing: border-box;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 1.6;
+    width: 100vw; /* 100% of the viewport width */
+    min-height: 100vh; /* Ensure the body covers at least the full height of the viewport */
+}
+
+h1 {
+    font-size: 2.5rem;
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #ecf0f1;
     text-align: center;
     margin-bottom: 1rem;
 }
 
+p {
+    font-size: 1rem;
+}
+
 .container {
     max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     padding: 20px;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flex-item {
+    flex: 1 1 calc(33.33% - 20px);
+    margin: 10px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    .flex-item {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.8rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    .flex-item {
+        flex: 1 1 100%;
+    }
 }
 
 /* Navbar Styles */
@@ -37,6 +106,9 @@ h2 {
 .navbar-tablist {
     display: flex;
     gap: 15px;
+    list-style-type: none; /* Removes the default bullet points */
+    padding-left: 0; /* Removes any left padding */
+    margin: 0; /* Removes any default margin */
 }
 
 .navbar-link {
@@ -63,6 +135,35 @@ h2 {
 .navbar-tab[aria-selected="true"] {
     color: #111; /* Dark color for selected tab text */
     border-bottom: 3px solid #111; /* Dark underline for selected tab */
+}
+
+/* Toggle button */
+.navbar-toggle {
+    display: none; /* Hide the toggle button by default */
+    background-color: #111;
+    color: #ecf0f1;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Show the toggle button and adjust navbar for smaller screens */
+@media (max-width: 768px) {
+    .navbar-tabs {
+        display: none; /* Hide the tabs by default on small screens */
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-toggle {
+        display: block; /* Show the toggle button on small screens */
+    }
+
+    .navbar-tabs.active {
+        display: flex; /* Show the navbar tabs when the button is active */
+    }
 }
 
 
@@ -308,7 +409,7 @@ h2 {
 }
 
 .css-bhb3xr li {
-    display: flex;  
+    display: flex;
     align-items: center;
     margin-bottom: 10px; /* Add space between the list items */
 }
@@ -321,8 +422,8 @@ h2 {
     margin-right: 15px; /* Add space to the right of the icon */
 }
 
-.css-bhb3xr li span, 
-.css-bhb3xr li strong, 
+.css-bhb3xr li span,
+.css-bhb3xr li strong,
 .css-bhb3xr li kbd {
     margin-right: 10px; /* Add space between text elements */
     margin-left: 15px; /* Optional: Add a small space on the left */
@@ -338,15 +439,15 @@ h2 {
 }
 
 #publications ul li svg {
-    margin-right: 25px; /* Increased margin-right for the SVG */
-    margin-top: 3px; /* Add a small top margin for better alignment */
+    margin-right: 0px; /* Increased margin-right for the SVG */
+    margin-top: 5px; /* Add a small top margin for better alignment */
     color: #1abc9c;
 }
 
 #publications ul li span {
     font-size: 1.1rem;
     color: #ecf0f1;
-    margin-left: 5px; /* Added a small margin-left for spacing */
+    margin-left: 0px; /* Added a small margin-left for spacing */
 }
 
 #publications ul li .publication-status {
@@ -565,3 +666,45 @@ h2 {
         text-align: left;
     }
 }
+
+
+/* Additional Styles */
+.css-157wn8n {
+    font-size: 4rem; /* Adjust the size as needed */
+}
+
+.css-cuv99z {
+    height: 25px;
+    width: 25px;
+}
+
+.shiny-name {
+    background: linear-gradient(90deg, #f3ec78, #af4261, #f3ec78); /* Gradient background */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: shine 2s linear infinite;
+}
+
+@keyframes shine {
+    0% {
+        background-position: 200% center;
+    }
+    100% {
+        background-position: -200% center;
+    }
+}
+
+.parent-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.kbd-c {
+    display: inline-block; /* Ensures the element respects width */
+    width: 100%; /* or specify a fixed width like '300px' */
+    max-width: 100%; /* Ensures it doesn't exceed the parent container */
+    box-sizing: border-box; /* Makes sure padding is included within the width */
+    font-size: 1.5rem; /* Increase the font size as needed */
+}
+
