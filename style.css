@@ -709,25 +709,29 @@ img, video {
 }
 
 .btn-x {
-    color: black; /* Default text color */
+    background-color: black; /* Default background color */
+    color: white; /* Default text color */
     font-size: 1em;
     padding: 8px 12px;
     display: inline-flex;
     align-items: center;
     border: none;
-    transition: color 0.3s ease, transform 0.3s ease;
+    border-radius: 4px; /* Optional: Rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease;
     text-decoration: none;
 }
 
-.btn-x img {
-    transition: transform 0.3s ease;
+.btn-x .x-image {
+    filter: invert(1); /* Makes the image white */
+    transition: filter 0.3s ease;
+    margin-right: 8px; /* Adds spacing between logo and text */
 }
 
 .btn-x:hover {
-    color: #1da1f2; /* X brand color for hover */
-    transform: scale(1.1); /* Slightly enlarges the button */
+    background-color: white; /* Hover background color */
+    color: black; /* Hover text color */
 }
 
-.btn-x:hover img {
-    transform: scale(1.2); /* Enlarges the logo slightly */
+.btn-x:hover .x-image {
+    filter: invert(0); /* Makes the image black */
 }
