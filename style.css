@@ -709,18 +709,25 @@ img, video {
 }
 
 .btn-x {
-    color: black; /* Default color */
+    color: black; /* Default text color */
     font-size: 1em;
     padding: 8px 12px;
     display: inline-flex;
     align-items: center;
     border: none;
     transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-x img {
+    transition: transform 0.3s ease;
 }
 
 .btn-x:hover {
-    color: #1da1f2; /* Replace with desired hover color, like X's blue branding */
-    transform: scale(1.1); /* Optional scaling effect */
+    color: #1da1f2; /* X brand color for hover */
+    transform: scale(1.1); /* Slightly enlarges the button */
 }
 
-
+.btn-x:hover img {
+    transform: scale(1.2); /* Enlarges the logo slightly */
+}
